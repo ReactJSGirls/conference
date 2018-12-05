@@ -106,10 +106,6 @@ const Button = styled.button`
     right: 0;
     left: auto;
   }
-
-  &:first-child {
-    margin-right: 20px;
-  }
 `
 
 export default () => {

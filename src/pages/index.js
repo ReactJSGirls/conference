@@ -2,13 +2,13 @@ import React from 'react'
 import Subscribe from '../components/subscribe'
 import Layout from '../layout/index'
 import styled from 'styled-components'
+import YLD from '../assets/yld.svg'
 
 const Main = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100%;
-  padding-bottom: 100px;
 `
 const Content = styled.section`
   display: flex;
@@ -21,6 +21,12 @@ const Content = styled.section`
 const Buttons = styled.section`
   display: flex;
   margin-top: 30px;
+`
+
+const LogoWrapper = styled.a`
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
 `
 
 const Button = styled.a`
@@ -99,6 +105,20 @@ const IndexPage = ({ data }) => {
             </Button>
           </Buttons>
           <Subscribe />
+          <LogoWrapper
+            href="https://yld.io"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Organized by{' '}
+            <YLD
+              style={{
+                marginLeft: -15,
+                marginRight: -20,
+                transform: 'scale(0.5)'
+              }}
+            />
+          </LogoWrapper>
         </Content>
         <Footer>
           <a
@@ -114,9 +134,6 @@ const IndexPage = ({ data }) => {
             target="_blank"
           >
             Contact
-          </a>
-          <a href="https://yld.io" rel="noopener noreferrer" target="_blank">
-            Organized by YLD
           </a>
         </Footer>
       </Main>
