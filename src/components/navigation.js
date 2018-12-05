@@ -8,6 +8,12 @@ const GirlsLogo = styled(Logo)`
   display: block;
   margin: 0 auto;
   margin-bottom: 30px;
+  transform: rotate(0deg);
+  transition: transform 500ms ease;
+
+  &:hover {
+    transform: rotate(360deg);
+  }
 `
 
 const H1 = styled.h1`
