@@ -1,61 +1,28 @@
 import React from 'react'
-import Container from '../components/container'
-import Navigation from '../components/navigation'
+import Header from '../components/header'
 import { StaticQuery, graphql } from 'gatsby'
-import Helmet from 'react-helmet'
 import GlobalStyle from '../utils/global'
+import Head from '../components/Head'
+
+const query = graphql`
+  query HeadingQuery {
+    contentfulWebsiteData {
+      seoTitle
+      seoDescription
+    }
+  }
+`
 
 const Template = ({ children }) => {
   return (
     <StaticQuery
-      query={graphql`
-        query HeadingQuery {
-          allContentfulWebsiteData {
-            edges {
-              node {
-                seoTitle
-                seoDescription
-              }
-            }
-          }
-        }
-      `}
-      render={({ allContentfulWebsiteData: { edges } }) => (
+      query={query}
+      render={({ contentfulWebsiteData }) => (
         <>
-          <Helmet>
-            <html lang="en" />
-            <title>{edges[0].node.seoTitle}</title>
-            <meta name="description" content={edges[0].node.seoDescription} />
-            <meta charset="utf-8" />
-            <meta
-              name="image"
-              content="https://rawcdn.githack.com/ReactJSGirls/conference/e0eb639f54f8b18c83177c6b44ab2199b09665d9/src/assets/logo.png"
-            />
-            <meta itemProp="name" content={edges[0].node.seoTitle} />
-            <meta
-              itemProp="description"
-              content={edges[0].node.seoDescription}
-            />
-            <meta
-              itemProp="image"
-              content="https://rawcdn.githack.com/ReactJSGirls/conference/e0eb639f54f8b18c83177c6b44ab2199b09665d9/src/assets/logo.png"
-            />
-            <meta name="og:title" content={edges[0].node.seoTitle} />
-            <meta
-              name="og:description"
-              content={edges[0].node.seoDescription}
-            />
-            <meta
-              name="og:image"
-              content="https://rawcdn.githack.com/ReactJSGirls/conference/e0eb639f54f8b18c83177c6b44ab2199b09665d9/src/assets/logo.png"
-            />
-            <meta name="og:url" content="https://reactjsgirls.com" />
-            <meta name="og:site_name" content={edges[0].node.seoTitle} />
-            <meta name="og:type" content="website" />
-          </Helmet>
-          <Navigation />
+          <Head {...contentfulWebsiteData} />
+          <Header />
           <GlobalStyle />
-          <Container>{children}</Container>
+          <div style={{ maxWidth: 1180, margin: '0 auto' }}>{children}</div>
         </>
       )}
     />

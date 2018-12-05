@@ -1,13 +1,12 @@
 {
   "name": "react-js-girls-conference",
   "dependencies": {
-    "babel-plugin-styled-components": "^1.9.2",
-    "gatsby": "^2.0.62",
+    "gatsby": "^2.0.63",
     "gatsby-image": "^2.0.22",
     "gatsby-plugin-favicon": "^3.1.4",
     "gatsby-plugin-google-analytics": "^2.0.8",
     "gatsby-plugin-react-helmet": "^3.0.4",
-    "gatsby-plugin-react-svg": "^2.0.0-beta1",
+    "gatsby-plugin-react-svg": "^2.0.0",
     "gatsby-plugin-sharp": "^2.0.14",
     "gatsby-plugin-styled-components": "^3.0.4",
     "gatsby-plugin-svgr": "^2.0.1",
@@ -21,9 +20,8 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^4.1.0",
+    "babel-plugin-styled-components": "^1.9.2",
     "babel-eslint": "^10.0.1",
-    "chalk": "^2.4.1",
-    "contentful-import": "^7.4.3",
     "dotenv": "^6.1.0",
     "eslint": "^5.9.0",
     "eslint-config-standard": "^12.0.0",
@@ -32,18 +30,15 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-standard": "^4.0.0",
-    "inquirer": "^6.2.1",
-    "prettier": "^1.15.3",
-    "rimraf": "^2.6.2",
-    "yargs-parser": "^11.1.1"
+    "prettier": "^1.15.3"
   },
   "license": "MIT",
-  "main": "n/a",
   "scripts": {
     "dev": "gatsby develop",
     "test": "eslint . --cache --fix --ext .js",
     "posttest": "npm run format",
     "format": "prettier --write \"src/**/*.js\"",
-    "build": "gatsby build"
+    "build": "gatsby build",
+    "deploy": "npm run build && now public"
   }
 }

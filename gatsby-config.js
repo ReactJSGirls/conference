@@ -21,6 +21,18 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Roboto']
+        },
+        custom: {
+          families: ['Dank Mono'],
+          urls: ['/src/utils/dank-mono.css']
+        }
+      }
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: 'YOUR_GOOGLE_ANALYTICS_TRACKING_ID'

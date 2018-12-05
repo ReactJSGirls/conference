@@ -45,31 +45,30 @@ const Nav = styled.nav`
   margin: auto;
 `
 
-export default () => (
+const query = graphql`
+  query details {
+    contentfulWebsiteData {
+      conferenceName
+      tagline
+      dateAndLocation
+    }
+  }
+`
+
+const Header = () => (
   <StaticQuery
-    query={graphql`
-      {
-        allContentfulWebsiteData {
-          edges {
-            node {
-              conferenceName
-              tagline
-              dateAndLocation
-            }
-          }
-        }
-      }
-    `}
-    render={({ allContentfulWebsiteData: { edges } }) => {
-      const data = edges[0].node
-      return (
-        <Nav role="navigation">
-          <GirlsLogo />
-          <H1>{data.conferenceName}</H1>
-          <Tagline>{data.tagline}</Tagline>
-          <Date>{data.dateAndLocation}</Date>
-        </Nav>
-      )
-    }}
+    query={query}
+    render={({
+      contentfulWebsiteData: { conferenceName, tagline, dateAndLocation }
+    }) => (
+      <Nav role="navigation">
+        <GirlsLogo />
+        <H1>{conferenceName}</H1>
+        <Tagline>{tagline}</Tagline>
+        <Date>{dateAndLocation}</Date>
+      </Nav>
+    )}
   />
 )
+
+export default Header
