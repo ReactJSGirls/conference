@@ -30,7 +30,7 @@ const Template = ({ children }) => {
             <meta charset="utf-8" />
             <meta
               name="image"
-              content="https://rawcdn.githack.com/ReactJSGirls/conference/0668dada75f299cb2cabdd142a6f4277eb378372/src/assets/favicon.png"
+              content="https://rawcdn.githack.com/ReactJSGirls/conference/0668dada75f299cb2cabdd142a6f4277eb378372/src/assets/logo.png"
             />
             <meta itemProp="name" content={edges[0].node.seoTitle} />
             <meta
@@ -39,7 +39,7 @@ const Template = ({ children }) => {
             />
             <meta
               itemProp="image"
-              content="https://rawcdn.githack.com/ReactJSGirls/conference/0668dada75f299cb2cabdd142a6f4277eb378372/src/assets/favicon.png"
+              content="https://rawcdn.githack.com/ReactJSGirls/conference/0668dada75f299cb2cabdd142a6f4277eb378372/src/assets/logo.png"
             />
             <meta name="og:title" content={edges[0].node.seoTitle} />
             <meta
@@ -48,7 +48,7 @@ const Template = ({ children }) => {
             />
             <meta
               name="og:image"
-              content="https://rawcdn.githack.com/ReactJSGirls/conference/0668dada75f299cb2cabdd142a6f4277eb378372/src/assets/favicon.png"
+              content="https://rawcdn.githack.com/ReactJSGirls/conference/0668dada75f299cb2cabdd142a6f4277eb378372/src/assets/logo.png"
             />
             <meta name="og:url" content="https://reactjsgirls.com" />
             <meta name="og:site_name" content={edges[0].node.seoTitle} />

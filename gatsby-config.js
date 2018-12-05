@@ -11,6 +11,7 @@ module.exports = {
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
+    `gatsby-plugin-emotion`,
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
@@ -25,12 +26,12 @@ module.exports = {
         trackingId: 'YOUR_GOOGLE_ANALYTICS_TRACKING_ID'
       }
     },
-    {
-      resolve: 'gatsby-plugin-mailchimp',
-      options: {
-        endpoint: '' // see instructions section below
-      }
-    },
+    // {
+    //   resolve: 'gatsby-plugin-mailchimp',
+    //   options: {
+    //     endpoint: '' // see instructions section below
+    //   }
+    // },
     {
       resolve: `gatsby-plugin-favicon`,
       options: {
