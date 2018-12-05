@@ -1,6 +1,7 @@
 import React from 'react'
 import Logo from '../assets/logo.svg'
 import styled from '@emotion/styled'
+import { StaticQuery, graphql } from 'gatsby'
 
 const GirlsLogo = styled(Logo)`
   width: 145px;
@@ -39,12 +40,31 @@ const Nav = styled.nav`
 `
 
 export default () => (
-  <Nav role="navigation">
-    <GirlsLogo />
-    <H1>ReactJS Girls Conference</H1>
-    <Tagline>
-      A conference for every React developer where women take the stage
-    </Tagline>
-    <Date>3 May, London UK</Date>
-  </Nav>
+  <StaticQuery
+    query={graphql`
+      {
+        allContentfulWebsiteData {
+          edges {
+            node {
+              conferenceName
+              tagline
+              dateAndLocation
+            }
+          }
+        }
+      }
+    `}
+    render={({ allContentfulWebsiteData: { edges } }) => {
+      const data = edges[0].node
+      console.log(edges)
+      return (
+        <Nav role="navigation">
+          <GirlsLogo />
+          <H1>{data.conferenceName}</H1>
+          <Tagline>{data.tagline}</Tagline>
+          <Date>{data.dateAndLocation}</Date>
+        </Nav>
+      )
+    }}
+  />
 )

@@ -5,9 +5,7 @@ import Layout from '../layout/index'
 const IndexPage = ({ data }) => {
   return (
     <Layout style={{ background: '#fff' }}>
-      <div className="wrapper">
-        <h2 className="section-headline">Recent articles</h2>
-      </div>
+      <div className="wrapper" />
     </Layout>
   )
 }

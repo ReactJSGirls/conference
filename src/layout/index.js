@@ -11,23 +11,22 @@ const Template = ({ children }) => {
     <StaticQuery
       query={graphql`
         query HeadingQuery {
-          site {
-            siteMetadata {
-              title
-              description
+          allContentfulWebsiteData {
+            edges {
+              node {
+                seoTitle
+                seoDescription
+              }
             }
           }
         }
       `}
-      render={data => (
+      render={({ allContentfulWebsiteData: { edges } }) => (
         <>
           <Helmet>
             <html lang="en" />
-            <title>{data.site.siteMetadata.title}</title>
-            <meta
-              name="description"
-              content={data.site.siteMetadata.description}
-            />
+            <title>{edges[0].node.seoTitle}</title>
+            <meta name="description" content={edges[0].node.seoDescription} />
           </Helmet>
           <Navigation />
           <Global styles={styles} />
