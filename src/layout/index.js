@@ -3,8 +3,7 @@ import Container from '../components/container'
 import Navigation from '../components/navigation'
 import { StaticQuery, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
-import { Global } from '@emotion/core'
-import styles from '../utils/global'
+import GlobalStyle from '../utils/global'
 
 const Template = ({ children }) => {
   return (
@@ -55,7 +54,7 @@ const Template = ({ children }) => {
             <meta name="og:type" content="website" />
           </Helmet>
           <Navigation />
-          <Global styles={styles} />
+          <GlobalStyle />
           <Container>{children}</Container>
         </>
       )}

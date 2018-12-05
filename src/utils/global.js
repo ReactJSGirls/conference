@@ -1,7 +1,7 @@
-import { css } from '@emotion/core'
+import { createGlobalStyle } from 'styled-components'
 import dank from './dank-mono'
 
-export default css`
+export default createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Roboto');
   ${dank}
   html,
@@ -276,7 +276,6 @@ export default css`
     color: inherit;
     text-decoration: none;
     position: relative;
-    color: ${props => props.theme.blue};
   }
 
   .video-container {

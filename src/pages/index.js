@@ -1,7 +1,7 @@
 import React from 'react'
 import Subscribe from '../components/subscribe'
 import Layout from '../layout/index'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 
 const Main = styled.main`
   display: flex;
@@ -102,7 +102,7 @@ const IndexPage = ({ data }) => {
         </Content>
         <Footer>
           <a
-            href="https://www.notion.so/yldeditorial/ReactJS-GIRLS-Code-Of-Conduct-c2ec1f30ef164ec1b7ddc1f6ee11d832"
+            href="https://www.notion.so/yldeditorial/REACTJS-GIRLS-Code-of-Conduct-79c2d5f938a14ac6a885b9b77d6044f6"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -114,6 +114,9 @@ const IndexPage = ({ data }) => {
             target="_blank"
           >
             Contact
+          </a>
+          <a href="https://yld.io" rel="noopener noreferrer" target="_blank">
+            Organized by YLD
           </a>
         </Footer>
       </Main>

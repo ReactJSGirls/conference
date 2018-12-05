@@ -1,6 +1,6 @@
 import React from 'react'
 import Logo from '../assets/logo.svg'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 
 const GirlsLogo = styled(Logo)`

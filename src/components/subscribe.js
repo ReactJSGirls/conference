@@ -1,9 +1,10 @@
 import React from 'react'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 
-const Form = styled.form`
+const Form = styled.div`
   display: flex;
   margin-top: 60px;
+  width: 100%;
 `
 
 const Input = styled.input`
@@ -15,16 +16,34 @@ const Input = styled.input`
   background: #fff;
   min-width: 150px;
 
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
+
   &.no-right {
     border-right: none;
+    @media screen and (max-width: 600px) {
+      border-right: 3px solid #fb8e82;
+    }
   }
 `
 const Wrapper = styled.div`
   display: flex;
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 `
 
 const InputWrapper = styled.div`
   position: relative;
+
+  @media screen and (max-width: 600px) {
+    margin-bottom: 20px;
+    width: 100%;
+  }
 
   input:focus + label {
     opacity: 0;
@@ -55,6 +74,11 @@ const Button = styled.button`
   color: white;
   font-size: 100%;
   border-left: none;
+
+  @media screen and (max-width: 600px) {
+    border-left: 3px solid #fb8e82;
+    width: 100%;
+  }
 
   &:hover {
     color: #313131;
@@ -97,21 +121,22 @@ export default () => {
         id="mc-embedded-subscribe-form"
         name="mc-embedded-subscribe-form"
         target="_blank"
+        style={{ width: '100%' }}
       >
         <h2 style={{ textAlign: 'center' }}>Signup for news</h2>
         <Wrapper id="mc_embed_signup_scroll">
           <InputWrapper>
-            <Input required type="text" name="FNAME" id="mce-FNAME" />
+            <Input
+              className="no-right"
+              required
+              type="text"
+              name="FNAME"
+              id="mce-FNAME"
+            />
             <label htmlFor="mce-FNAME">Name </label>
           </InputWrapper>
           <InputWrapper>
-            <Input
-              className="no-right"
-              type="email"
-              required
-              name="EMAIL"
-              id="mce-EMAIL"
-            />
+            <Input type="email" required name="EMAIL" id="mce-EMAIL" />
             <label htmlFor="mce-EMAIL">Email</label>
           </InputWrapper>
           <div id="mce-responses">
