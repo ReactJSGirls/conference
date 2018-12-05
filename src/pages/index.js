@@ -1,59 +1,124 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import Subscribe from '../components/subscribe'
 import Layout from '../layout/index'
+import styled from '@emotion/styled'
+
+const Main = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  padding-bottom: 100px;
+`
+const Content = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  flex-grow: 1;
+`
+
+const Buttons = styled.section`
+  display: flex;
+  margin-top: 30px;
+`
+
+const Button = styled.a`
+  text-decoration: none;
+  background: transparent;
+  border: 3px solid #fb8e82;
+  padding: 10px 15px;
+  position: relative;
+  transition: all 200ms ease;
+
+  &:hover {
+    color: #313131;
+
+    &:after,
+    &:before {
+      width: 50%;
+    }
+  }
+
+  &:after,
+  &:before {
+    transition: all 200ms ease;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: #fb8e82;
+    z-index: -1;
+  }
+
+  &:before {
+    right: 0;
+    left: auto;
+  }
+
+  &:first-child {
+    margin-right: 20px;
+  }
+`
+
+const Footer = styled.footer`
+  height: 50px;
+  margin-top: 40px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  top: 100%;
+  padding-bottom: 20px;
+
+  a:not(:last-child) {
+    margin-right: 20px;
+  }
+`
 
 const IndexPage = ({ data }) => {
   return (
-    <Layout style={{ background: '#fff' }}>
-      <div className="wrapper" />
+    <Layout>
+      <Main>
+        <Content>
+          <Buttons>
+            <Button
+              rel="noopener noreferrer"
+              href="https://yld.typeform.com/to/gfZ2jc"
+              target="_blank"
+            >
+              Apply to speak
+            </Button>
+            <Button
+              rel="noopener noreferrer"
+              href="mailto:sponsor@reactjsgirls.com"
+              target="_blank"
+            >
+              Sponsor the event
+            </Button>
+          </Buttons>
+          <Subscribe />
+        </Content>
+        <Footer>
+          <a
+            href="https://www.notion.so/yldeditorial/ReactJS-GIRLS-Code-Of-Conduct-c2ec1f30ef164ec1b7ddc1f6ee11d832"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Code of Conduct
+          </a>
+          <a
+            href="mailto:hey@reactjsgirls.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Contact
+          </a>
+        </Footer>
+      </Main>
     </Layout>
   )
 }
 
 export default IndexPage
-
-export const query = graphql`
-  query HomeQuery {
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
-      edges {
-        node {
-          title
-          slug
-          publishDate(formatString: "MMMM Do, YYYY")
-          tags
-          heroImage {
-            sizes(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-              ...GatsbyContentfulSizes_tracedSVG
-            }
-          }
-          description {
-            childMarkdownRemark {
-              html
-            }
-          }
-        }
-      }
-    }
-    allContentfulPerson(filter: { id: { eq: "c15jwOBqpxqSAOy2eOO4S0m" } }) {
-      edges {
-        node {
-          name
-          shortBio {
-            shortBio
-          }
-          title
-          heroImage: image {
-            sizes(
-              maxWidth: 1180
-              maxHeight: 480
-              resizingBehavior: PAD
-              background: "rgb:000000"
-            ) {
-              ...GatsbyContentfulSizes_tracedSVG
-            }
-          }
-        }
-      }
-    }
-  }
-`

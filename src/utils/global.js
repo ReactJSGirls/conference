@@ -129,6 +129,12 @@ export default css`
     border-spacing: 0;
   }
 
+  html,
+  body,
+  #___gatsby,
+  #___gatsby > div {
+    height: 100%;
+  }
   body {
     font-size: 100%;
     font-family: 'Avenir Next', 'Roboto', sans-serif;

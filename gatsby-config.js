@@ -11,7 +11,7 @@ module.exports = {
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
-    `gatsby-plugin-emotion`,
+    // `gatsby-plugin-emotion`,
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {

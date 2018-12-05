@@ -7,7 +7,6 @@ const GirlsLogo = styled(Logo)`
   width: 145px;
   display: block;
   margin: 0 auto;
-  margin-top: 60px;
   margin-bottom: 30px;
 `
 
@@ -35,6 +34,7 @@ const Date = styled.span`
 `
 
 const Nav = styled.nav`
+  padding-top: 60px;
   max-width: 90%;
   margin: auto;
 `
@@ -56,7 +56,6 @@ export default () => (
     `}
     render={({ allContentfulWebsiteData: { edges } }) => {
       const data = edges[0].node
-      console.log(edges)
       return (
         <Nav role="navigation">
           <GirlsLogo />
