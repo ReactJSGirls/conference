@@ -25,10 +25,6 @@ module.exports = {
       options: {
         google: {
           families: ['Roboto']
-        },
-        custom: {
-          families: ['Dank Mono'],
-          urls: ['/src/utils/dank-mono.css']
         }
       }
     },
