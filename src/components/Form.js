@@ -29,6 +29,10 @@ export const InputWrapper = styled.div`
     width: 100%;
   }
 
+  input:invalid + label {
+    opacity: 0.8;
+  }
+
   input:focus + label {
     opacity: 0;
   }
@@ -42,7 +46,7 @@ export const InputWrapper = styled.div`
     color: #333;
     font-size: 20px;
     font-family: 'Dank Mono';
-    opacity: 0.8;
+    opacity: 0;
   }
 `
 
