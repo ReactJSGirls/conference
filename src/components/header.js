@@ -69,7 +69,15 @@ const Header = () => (
           `}
         >
           <GirlsLogo />
-          <p>{conferenceName}</p>
+          <p
+            css={`
+              @media screen and (max-width: 932px) {
+                color: white;
+              }
+            `}
+          >
+            {conferenceName}
+          </p>
         </section>
 
         <nav>
