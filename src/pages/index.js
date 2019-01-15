@@ -3,7 +3,7 @@ import React from 'react'
 import Layout from '../layout/index'
 import styled from 'styled-components'
 import YLD from '../assets/yld.svg'
-import Underground from '../assets/underground.svg'
+import Twitter from '../assets/twitter.svg'
 // import Button from '../components/Button'
 import Page from '../components/Page'
 import Map from '../components/Map'
@@ -98,13 +98,43 @@ const IndexPage = ({ data }) => {
                 css={`
                   display: grid;
                   grid-template-columns: 1fr 1fr;
+                  align-items: center;
                 `}
               >
                 <div>
                   <h2>30 Euston Square</h2>
-                  <p>30 Euston Square</p>
-                  <p>London NW1 2FB</p>
-                  <p>UK</p>
+                  <h4>Address</h4>
+                  <p
+                    css={`
+                      margin-bottom: 20px;
+                    `}
+                  >
+                    30 Euston Square, London NW1 2FB
+                  </p>
+                  <h4>Email</h4>
+                  <p
+                    css={`
+                      margin-bottom: 20px;
+                    `}
+                  >
+                    <a
+                      css={`
+                        text-decoration: underline;
+                      `}
+                      href="mailto:hey@reactjsgirls.com"
+                    >
+                      hey@reactjsgirls.com
+                    </a>
+                  </p>
+                  <h4>Follow us</h4>
+                  <a href="https://twitter.com/ReactJSgirls">
+                    <Twitter
+                      css={`
+                        width: 24px;
+                        fill: #fff;
+                      `}
+                    />
+                  </a>
                 </div>
                 <Map />
               </div>
