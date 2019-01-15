@@ -1,9 +1,8 @@
 import React from 'react'
-// import Subscribe from '../components/subscribe'
+
 import Layout from '../layout/index'
 import styled from 'styled-components'
-import YLD from '../assets/yld.svg'
-import Twitter from '../assets/twitter.svg'
+
 // import Button from '../components/Button'
 import Page from '../components/Page'
 import Map from '../components/Map'
@@ -27,12 +26,6 @@ const Content = styled.section`
 //   display: flex;
 //   margin-top: 30px;
 // `
-
-const LogoWrapper = styled.a`
-  display: flex;
-  align-items: center;
-  margin-top: 50px;
-`
 
 const Container = styled.div`
   width: 1100px;
@@ -84,7 +77,7 @@ const IndexPage = ({ data }) => {
               </ul>
             </Container>
           </Page>
-          <Page>
+          <Page center>
             <Container>
               <h1
                 css={`
@@ -119,20 +112,14 @@ const IndexPage = ({ data }) => {
                   >
                     Euston, Euston Square
                   </p>
-                  <h4>Email</h4>
+                  <h4>Accessibility</h4>
                   <p
                     css={`
                       margin-bottom: 20px;
                     `}
                   >
-                    <a
-                      css={`
-                        text-decoration: underline;
-                      `}
-                      href="mailto:hey@reactjsgirls.com"
-                    >
-                      hey@reactjsgirls.com
-                    </a>
+                    The venue provides step-free access, and additional
+                    assistance for anyone who requires it
                   </p>
                 </div>
                 <Map />
@@ -155,21 +142,6 @@ const IndexPage = ({ data }) => {
               Sponsor the event
             </Button>
           </Buttons> */}
-          {/* <Subscribe /> */}
-          <LogoWrapper
-            href="https://yld.io"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Organised by{' '}
-            <YLD
-              style={{
-                marginLeft: -15,
-                marginRight: -20,
-                transform: 'scale(0.5)'
-              }}
-            />
-          </LogoWrapper>
         </Content>
         <Footer />
       </Main>
