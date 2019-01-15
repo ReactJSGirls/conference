@@ -1,18 +1,18 @@
 import { createGlobalStyle } from 'styled-components'
-import dank from './css/dank-mono.js'
 import typography from './css/type.js'
 import reset from './css/reset.js'
+import font from 'circular-std'
 
 export default createGlobalStyle`
-${dank}
+${font}
 ${reset}
 ${typography}
 
 body {
-  font-family: 'Avenir Next', 'Roboto', sans-serif;
-  background: #313131;
+  font-family: 'CircularStd', 'Roboto', sans-serif;
+  background: #FFFFFF;
   line-height: 1.33;
-  color: #fff;
+  color: #41495D;
   overflow-x: hidden;
 
   * {
@@ -28,8 +28,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Dank Mono', sans-serif;
-  font-weight: 700;
+  font-family: 'CircularStd', sans-serif;
+  font-weight: 600;
   padding-bottom: 20px;
 }
 

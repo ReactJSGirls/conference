@@ -4,45 +4,45 @@ import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 
 const GirlsLogo = styled(Logo)`
-  width: 145px;
+  width: 45px;
+  height: 40px;
   display: block;
-  margin: 0 auto;
-  margin-bottom: 30px;
   transform: rotate(0deg);
   transition: transform 500ms ease;
+  margin-right: 12px;
 
   &:hover {
     transform: rotate(360deg);
   }
 `
 
-const H1 = styled.h1`
-  color: #fb8e82;
-  font-size: 48px;
-  text-transform: uppercase;
-  text-align: center;
-`
+// const H1 = styled.h1`
+//   color: #fb8e82;
+//   font-size: 48px;
+//   text-transform: uppercase;
+//   text-align: center;
+// `
 
-const Tagline = styled.p`
-  font-size: 24px;
-  max-width: 500px;
-  display: block;
-  margin: auto;
-  text-align: center;
-`
-
-const Date = styled.span`
-  font-size: 30px;
-  padding-top: 40px;
-  display: block;
-  margin: auto;
-  text-align: center;
-`
-
-const Nav = styled.nav`
-  padding-top: 60px;
+const HeaderStyled = styled.header`
+  padding-top: 20px;
   max-width: 90%;
   margin: auto;
+  margin-bottom: 160px;
+  display: flex;
+  justify-content: space-between;
+`
+
+const Li = styled.li`
+  color: white;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
 `
 
 const query = graphql`
@@ -61,12 +61,29 @@ const Header = () => (
     render={({
       contentfulWebsiteData: { conferenceName, tagline, dateAndLocation }
     }) => (
-      <Nav role="navigation">
-        <GirlsLogo />
-        <H1>{conferenceName}</H1>
-        <Tagline>{tagline}</Tagline>
-        <Date>{dateAndLocation}</Date>
-      </Nav>
+      <HeaderStyled>
+        <section
+          css={`
+            display: flex;
+            align-items: center;
+          `}
+        >
+          <GirlsLogo />
+          <p>{conferenceName}</p>
+        </section>
+
+        <nav>
+          <ul
+            css={`
+              display: flex;
+            `}
+          >
+            <Li>About</Li>
+            <Li>Tickets</Li>
+            <Li>Venue</Li>
+          </ul>
+        </nav>
+      </HeaderStyled>
     )}
   />
 )

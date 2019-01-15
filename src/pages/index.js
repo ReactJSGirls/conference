@@ -1,77 +1,100 @@
 import React from 'react'
-import Subscribe from '../components/subscribe'
 import Layout from '../layout/index'
-import styled from 'styled-components'
-import YLD from '../assets/yld.svg'
-import Button from '../components/Button'
-import Footer from '../components/Footer'
+import styled, { keyframes } from 'styled-components'
+import BG from '../assets/bg.svg'
+import PlanetA from '../assets/planet-a.svg'
+import Astronaut from '../assets/Astronaut.svg'
 
 const Main = styled.main`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 800px;
   min-height: 100%;
 `
-const Content = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-  flex-grow: 1;
+
+const Title = styled.h1`
+  font-size: 60px;
+  margin-bottom: 11px;
 `
 
-const Buttons = styled.section`
-  display: flex;
-  margin-top: 30px;
+const Tagline = styled.p`
+  font-size: 24px;
+  max-width: 400px;
+  margin-bottom: 20px;
 `
 
-const LogoWrapper = styled.a`
-  display: flex;
-  align-items: center;
-  margin-top: 50px;
+const Date = styled.span`
+  font-size: 303x;
+  color: #7a7f8d;
 `
 
-const IndexPage = ({ data }) => {
+const Illustration = styled.div`
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+`
+
+const hover = keyframes`
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+`
+
+const IndexPage = ({
+  data: {
+    contentfulWebsiteData: { conferenceName, tagline, dateAndLocation }
+  }
+}) => {
   return (
     <Layout>
       <Main>
-        <Content>
-          <Buttons>
-            <Button
-              rel="noopener noreferrer"
-              href="https://yld.typeform.com/to/gfZ2jc"
-              target="_blank"
-            >
-              Apply to speak
-            </Button>
-            <Button
-              rel="noopener noreferrer"
-              href="mailto:sponsor@reactjsgirls.com"
-              target="_blank"
-            >
-              Sponsor the event
-            </Button>
-          </Buttons>
-          <Subscribe />
-          <LogoWrapper
-            href="https://yld.io"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Organised by{' '}
-            <YLD
-              style={{
-                marginLeft: -15,
-                marginRight: -20,
-                transform: 'scale(0.5)'
-              }}
-            />
-          </LogoWrapper>
-        </Content>
-        <Footer />
+        <div
+          css={`
+            max-width: 400px;
+          `}
+        >
+          <Title>{conferenceName}</Title>
+          <Tagline>{tagline}</Tagline>
+          <Date>{dateAndLocation}</Date>
+        </div>
+        <Illustration>
+          <Astronaut
+            css={`
+              position: absolute;
+              top: 30%;
+              right: 15%;
+              transform: translatey(0px);
+              animation: ${hover} 6s ease-in-out infinite;
+            `}
+          />
+          <PlanetA
+            css={`
+              position: absolute;
+              top: 130px;
+              margin-left: 31px;
+            `}
+          />
+          <BG />
+        </Illustration>
       </Main>
     </Layout>
   )
 }
+
+export const query = graphql`
+  query {
+    contentfulWebsiteData {
+      conferenceName
+      tagline
+      dateAndLocation
+    }
+  }
+`
 
 export default IndexPage

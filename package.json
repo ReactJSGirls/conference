@@ -1,6 +1,7 @@
 {
   "name": "react-js-girls-conference",
   "dependencies": {
+    "circular-std": "^1.0.0",
     "gatsby": "^2.0.63",
     "gatsby-image": "^2.0.22",
     "gatsby-plugin-copy-files": "^1.0.1",

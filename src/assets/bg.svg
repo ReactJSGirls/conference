@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="827px" height="941px" viewBox="0 0 827 941" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>bg</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="9.12985159%" y1="19.0723277%" x2="88.3020127%" y2="87.1090522%" id="linearGradient-1">
+            <stop stop-color="#2F325E" offset="0%"></stop>
+            <stop stop-color="#1F2E61" offset="100%"></stop>
+        </linearGradient>
+        <path d="M58.7925011,362.407661 C17.1612838,531.783141 248.13198,645.515062 85.6737185,745.43218 C-76.7845426,845.349299 8.4507384,1104.63218 205.556531,1104.63218 C328.898437,1104.63218 342.117187,1023.89062 587.914062,1005.00781 C751.778646,992.419271 846.890625,1008.32813 873.25,1052.73437 C934.596781,649.712242 944.628031,348.800784 903.34375,150 C862.059469,-48.8007837 789.307479,-49.9154667 685.087781,146.655951 C480.844904,133.78135 352.8423,133.78135 301.079969,146.655951 C223.436471,165.967853 100.423719,193.03218 58.7925011,362.407661 Z" id="path-2"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="reactjs-girls-conf" transform="translate(-613.000000, 0.000000)">
+            <g id="Group-7" transform="translate(614.000000, -195.000000)">
+                <g id="bg">
+                    <path d="M58.7925011,392.407661 C17.1612838,561.783141 248.13198,675.515062 85.6737185,775.43218 C-76.7845426,875.349299 8.4507384,1134.63218 205.556531,1134.63218 C328.898437,1134.63218 342.117187,1053.89062 587.914062,1035.00781 C751.778646,1022.41927 846.890625,1038.32813 873.25,1082.73437 C934.596781,679.712242 944.628031,378.800784 903.34375,180 C862.059469,-18.8007837 789.307479,-19.9154667 685.087781,176.655951 C480.844904,163.78135 352.8423,163.78135 301.079969,176.655951 C223.436471,195.967853 100.423719,223.03218 58.7925011,392.407661 Z" id="Path-2" stroke-opacity="0.2" stroke="#2E335B" fill-rule="nonzero"></path>
+                    <g id="Group-5" transform="translate(40.000000, 0.000000)">
+                        <mask id="mask-3" fill="white">
+                            <use xlink:href="#path-2"></use>
+                        </mask>
+                        <use id="Path-2-Copy" fill="url(#linearGradient-1)" fill-rule="nonzero" xlink:href="#path-2"></use>
+                        <g id="stars" opacity="0.364606585" mask="url(#mask-3)">
+                            <g transform="translate(75.000000, 221.000000)">
+                                <g id="stars" transform="translate(60.000000, 14.000000)">
+                                    <polyline id="Fill-175" fill="#FFFFFF" points="7.85901426 263.796178 12 265.5 7.85901426 267.203822 5.99956575 271 4.14098574 267.203822 0 265.5 4.14098574 263.796178 5.99956575 260 7.85901426 263.796178"></polyline>
+                                    <polyline id="Fill-175-Copy-2" fill="#FFFFFF" points="287.859014 263.796178 292 265.5 287.859014 267.203822 285.999566 271 284.140986 267.203822 280 265.5 284.140986 263.796178 285.999566 260 287.859014 263.796178"></polyline>
+                                    <polyline id="Fill-175-Copy-3" fill="#FFFFFF" points="167.859014 173.796178 172 175.5 167.859014 177.203822 165.999566 181 164.140986 177.203822 160 175.5 164.140986 173.796178 165.999566 170 167.859014 173.796178"></polyline>
+                                    <polyline id="Fill-175-Copy" fill="#FFFFFF" points="399.859014 61.7961783 404 63.5 399.859014 65.2038217 397.999566 69 396.140986 65.2038217 392 63.5 396.140986 61.7961783 397.999566 58 399.859014 61.7961783"></polyline>
+                                    <circle id="Oval" fill="#FFFFFF" cx="16.5" cy="335.5" r="2.5"></circle>
+                                    <circle id="Oval-Copy" fill="#FFFFFF" cx="152.5" cy="386.5" r="2.5"></circle>
+                                    <circle id="Oval-Copy-2" fill="#FFFFFF" cx="332.5" cy="162.5" r="2.5"></circle>
+                                    <circle id="Oval-Copy-6" fill="#FFFFFF" cx="272" cy="132" r="2"></circle>
+                                    <circle id="Oval-Copy-3" fill="#FFFFFF" cx="182.5" cy="1.5" r="1.5"></circle>
+                                    <circle id="Oval-Copy-4" fill="#FFFFFF" cx="120.5" cy="17.5" r="1.5"></circle>
+                                    <circle id="Oval-Copy-5" fill="#FFFFFF" cx="1.5" cy="153.5" r="1.5"></circle>
+                                </g>
+                                <g id="stars-copy-2" transform="translate(498.000000, 0.000000)">
+                                    <polyline id="Fill-175" fill="#FFFFFF" points="7.85901426 263.796178 12 265.5 7.85901426 267.203822 5.99956575 271 4.14098574 267.203822 0 265.5 4.14098574 263.796178 5.99956575 260 7.85901426 263.796178"></polyline>
+                                    <polyline id="Fill-175-Copy-3" fill="#FFFFFF" points="167.859014 173.796178 172 175.5 167.859014 177.203822 165.999566 181 164.140986 177.203822 160 175.5 164.140986 173.796178 165.999566 170 167.859014 173.796178"></polyline>
+                                    <circle id="Oval" fill="#FFFFFF" cx="16.5" cy="335.5" r="2.5"></circle>
+                                    <circle id="Oval-Copy" fill="#FFFFFF" cx="152.5" cy="386.5" r="2.5"></circle>
+                                    <circle id="Oval-Copy-3" fill="#FFFFFF" cx="182.5" cy="1.5" r="1.5"></circle>
+                                    <circle id="Oval-Copy-4" fill="#FFFFFF" cx="120.5" cy="17.5" r="1.5"></circle>
+                                    <circle id="Oval-Copy-5" fill="#FFFFFF" cx="1.5" cy="153.5" r="1.5"></circle>
+                                </g>
+                                <g id="stars-copy" transform="translate(0.000000, 382.000000)">
+                                    <polyline id="Fill-175" fill="#FFFFFF" points="7.85901426 345.796178 12 347.5 7.85901426 349.203822 5.99956575 353 4.14098574 349.203822 0 347.5 4.14098574 345.796178 5.99956575 342 7.85901426 345.796178"></polyline>
+                                    <polyline id="Fill-175-Copy-2" fill="#FFFFFF" points="287.859014 345.796178 292 347.5 287.859014 349.203822 285.999566 353 284.140986 349.203822 280 347.5 284.140986 345.796178 285.999566 342 287.859014 345.796178"></polyline>
+                                    <polyline id="Fill-175-Copy-3" fill="#FFFFFF" points="167.859014 255.796178 172 257.5 167.859014 259.203822 165.999566 263 164.140986 259.203822 160 257.5 164.140986 255.796178 165.999566 252 167.859014 255.796178"></polyline>
+                                    <polyline id="Fill-175-Copy" fill="#FFFFFF" points="399.859014 143.796178 404 145.5 399.859014 147.203822 397.999566 151 396.140986 147.203822 392 145.5 396.140986 143.796178 397.999566 140 399.859014 143.796178"></polyline>
+                                    <polyline id="Fill-175-Copy-4" fill="#FFFFFF" points="399.859014 3.79617834 404 5.5 399.859014 7.20382166 397.999566 11 396.140986 7.20382166 392 5.5 396.140986 3.79617834 397.999566 0 399.859014 3.79617834"></polyline>
+                                    <circle id="Oval" fill="#FFFFFF" cx="16.5" cy="417.5" r="2.5"></circle>
+                                    <circle id="Oval-Copy" fill="#FFFFFF" cx="152.5" cy="468.5" r="2.5"></circle>
+                                    <circle id="Oval-Copy-2" fill="#FFFFFF" cx="332.5" cy="244.5" r="2.5"></circle>
+                                    <circle id="Oval-Copy-6" fill="#FFFFFF" cx="272" cy="214" r="2"></circle>
+                                    <circle id="Oval-Copy-3" fill="#FFFFFF" cx="182.5" cy="83.5" r="1.5"></circle>
+                                    <circle id="Oval-Copy-4" fill="#FFFFFF" cx="120.5" cy="99.5" r="1.5"></circle>
+                                    <circle id="Oval-Copy-5" fill="#FFFFFF" cx="1.5" cy="235.5" r="1.5"></circle>
+                                </g>
+                                <g id="stars-copy-3" transform="translate(440.000000, 354.000000)">
+                                    <polyline id="Fill-175" fill="#FFFFFF" points="7.85901426 345.796178 12 347.5 7.85901426 349.203822 5.99956575 353 4.14098574 349.203822 0 347.5 4.14098574 345.796178 5.99956575 342 7.85901426 345.796178"></polyline>
+                                    <polyline id="Fill-175-Copy-3" fill="#FFFFFF" points="167.859014 255.796178 172 257.5 167.859014 259.203822 165.999566 263 164.140986 259.203822 160 257.5 164.140986 255.796178 165.999566 252 167.859014 255.796178"></polyline>
+                                    <circle id="Oval" fill="#FFFFFF" cx="16.5" cy="417.5" r="2.5"></circle>
+                                    <circle id="Oval-Copy" fill="#FFFFFF" cx="152.5" cy="468.5" r="2.5"></circle>
+                                    <circle id="Oval-Copy-6" fill="#FFFFFF" cx="272" cy="214" r="2"></circle>
+                                    <circle id="Oval-Copy-3" fill="#FFFFFF" cx="182.5" cy="83.5" r="1.5"></circle>
+                                    <circle id="Oval-Copy-4" fill="#FFFFFF" cx="120.5" cy="99.5" r="1.5"></circle>
+                                    <circle id="Oval-Copy-5" fill="#FFFFFF" cx="1.5" cy="235.5" r="1.5"></circle>
+                                </g>
+                            </g>
+                        </g>
+                        <path d="M-0.328893189,952.765847 C72.6597076,916.99747 167.047984,899.113281 282.835938,899.113281 C456.517867,899.113281 476.549528,966.505308 625.046248,899.113281 C724.044062,854.185263 825.361979,849.690472 929,885.628906 L874.939453,1111.17204 L-5,1103.03893 L-0.328893189,952.765847 Z" id="Path-3" fill-opacity="0.5" fill="#162042" fill-rule="nonzero" mask="url(#mask-3)"></path>
+                        <path d="M-10.3288932,902.765847 C62.6597076,866.99747 157.047984,849.113281 272.835938,849.113281 C446.517867,849.113281 447.061246,878.426562 615.046248,849.113281 C727.036249,829.571094 828.354167,825.076302 919,835.628906 L871.144531,1164.63218 L-27.0898438,1191.3125 L-10.3288932,902.765847 Z" id="Path-3" fill-opacity="0.5" fill="#162042" fill-rule="nonzero" mask="url(#mask-3)"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

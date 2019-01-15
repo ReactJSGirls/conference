@@ -22,7 +22,7 @@ const Template = ({ children }) => {
           <Head {...contentfulWebsiteData} />
           <Header />
           <GlobalStyle />
-          <div style={{ maxWidth: 1180, margin: '0 auto' }}>{children}</div>
+          <div style={{ maxWidth: '90%', margin: '0 auto' }}>{children}</div>
         </>
       )}
     />
