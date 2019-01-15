@@ -3,7 +3,7 @@ import Layout from '../layout/index'
 import styled, { keyframes } from 'styled-components'
 import BG from '../assets/bg.svg'
 import PlanetA from '../assets/planet-a.svg'
-import Astronaut from '../assets/Astronaut.svg'
+import Astronaut from '../assets/astronaut.svg'
 
 const Main = styled.main`
   display: grid;
