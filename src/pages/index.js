@@ -4,6 +4,7 @@ import Layout from '../layout/index'
 import styled from 'styled-components'
 import YLD from '../assets/yld.svg'
 import Button from '../components/Button'
+import Page from '../components/Page'
 import Footer from '../components/Footer'
 
 const Main = styled.main`
@@ -31,12 +32,57 @@ const LogoWrapper = styled.a`
   margin-top: 50px;
 `
 
+const Container = styled.div`
+  width: 1100px;
+  max-width: 90%;
+  margin: auto;
+  padding: 60px 0;
+`
+
 const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Main>
         <Content>
-          <Buttons>
+          <Page light center>
+            <Container>
+              <h3
+                css={`
+                  padding-top: 40px;
+                `}
+              >
+                ReactJS Girls is one-day non-profit by-community for-community
+                conference for the JS community to celebrate React. The
+                conference will gather 300 React developers for a single-track
+                content-rich day, where women will take the stage
+              </h3>
+              <ul
+                css={`
+                  margin-top: 60px;
+
+                  li {
+                    margin-top: 20px;
+                    line-height: 36px;
+                    font-size: 20px;
+                  }
+                `}
+              >
+                <li>
+                  ReactJS Girls is a one day conference for every React
+                  developer, where women-identified speakers take the stage
+                </li>
+                <li>
+                  ReactJS Girls main focus is supporting the diversity community
+                  in React and offer a safe place for every developer
+                </li>
+                <li>
+                  The conference will gather 300 React developers for a
+                  single-track content-rich day in London
+                </li>
+              </ul>
+            </Container>
+          </Page>
+          {/* <Buttons>
             <Button
               rel="noopener noreferrer"
               href="https://yld.typeform.com/to/gfZ2jc"
@@ -51,8 +97,8 @@ const IndexPage = ({ data }) => {
             >
               Sponsor the event
             </Button>
-          </Buttons>
-          <Subscribe />
+          </Buttons> */}
+          {/* <Subscribe /> */}
           <LogoWrapper
             href="https://yld.io"
             rel="noopener noreferrer"

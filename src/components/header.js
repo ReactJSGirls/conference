@@ -40,7 +40,6 @@ const Date = styled.span`
 `
 
 const Nav = styled.nav`
-  padding-top: 60px;
   max-width: 90%;
   margin: auto;
 `

@@ -3,6 +3,7 @@ import Header from '../components/header'
 import { StaticQuery, graphql } from 'gatsby'
 import GlobalStyle from '../utils/global'
 import Head from '../components/Head'
+import Page from '../components/Page'
 
 const query = graphql`
   query HeadingQuery {
@@ -20,7 +21,9 @@ const Template = ({ children }) => {
       render={({ contentfulWebsiteData }) => (
         <>
           <Head {...contentfulWebsiteData} />
-          <Header />
+          <Page center>
+            <Header />
+          </Page>
           <GlobalStyle />
           <div style={{ maxWidth: 1180, margin: '0 auto' }}>{children}</div>
         </>
