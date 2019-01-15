@@ -1,0 +1,9 @@
+
+<svg width="506px" height="418px" viewBox="0 0 506 418" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="underground" transform="translate(4.000000, 4.000000)" stroke="#fff" stroke-width="8">
+            <path d="M248.906,0 C135.852,0 44,91.831 44,204.859 C44,318.17 135.852,410 248.906,410 C362.149,410 454,318.17 454,204.859 C454,91.831 362.149,0 248.906,0 Z M248.906,337.211 C175.819,337.211 116.805,277.836 116.805,204.859 C116.805,131.883 175.819,72.789 248.906,72.789 C321.899,72.789 381.194,131.883 381.194,204.859 C381.195,277.836 321.899,337.211 248.906,337.211 Z" id="Shape" fill="#E42111" fill-rule="nonzero"></path>
+            <rect id="Rectangle" fill="#fff" x="0.5" y="160" width="497" height="90"></rect>
+        </g>
+    </g>
+</svg>

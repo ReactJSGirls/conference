@@ -11,6 +11,7 @@
   },
   "plugins": ["react"],
   "globals": {
-    "graphql": false
+    "graphql": false,
+    "google": true
   }
 }

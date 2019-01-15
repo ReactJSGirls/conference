@@ -1,10 +1,12 @@
 import React from 'react'
-import Subscribe from '../components/subscribe'
+// import Subscribe from '../components/subscribe'
 import Layout from '../layout/index'
 import styled from 'styled-components'
 import YLD from '../assets/yld.svg'
-import Button from '../components/Button'
+import Underground from '../assets/underground.svg'
+// import Button from '../components/Button'
 import Page from '../components/Page'
+import Map from '../components/Map'
 import Footer from '../components/Footer'
 
 const Main = styled.main`
@@ -21,10 +23,10 @@ const Content = styled.section`
   flex-grow: 1;
 `
 
-const Buttons = styled.section`
-  display: flex;
-  margin-top: 30px;
-`
+// const Buttons = styled.section`
+//   display: flex;
+//   margin-top: 30px;
+// `
 
 const LogoWrapper = styled.a`
   display: flex;
@@ -82,14 +84,40 @@ const IndexPage = ({ data }) => {
               </ul>
             </Container>
           </Page>
+          <Page>
+            <Container>
+              <h1
+                css={`
+                  margin-bottom: 80px;
+                `}
+              >
+                Venue
+              </h1>
+
+              <div
+                css={`
+                  display: grid;
+                  grid-template-columns: 1fr 1fr;
+                `}
+              >
+                <div>
+                  <h2>30 Euston Square</h2>
+                  <p>30 Euston Square</p>
+                  <p>London NW1 2FB</p>
+                  <p>UK</p>
+                </div>
+                <Map />
+              </div>
+            </Container>
+          </Page>
           {/* <Buttons>
-            <Button
-              rel="noopener noreferrer"
-              href="https://yld.typeform.com/to/gfZ2jc"
-              target="_blank"
-            >
-              Apply to speak
-            </Button>
+              <Button
+                rel="noopener noreferrer"
+                href="https://yld.typeform.com/to/gfZ2jc"
+                target="_blank"
+              >
+                Apply to speak
+              </Button>
             <Button
               rel="noopener noreferrer"
               href="mailto:sponsor@reactjsgirls.com"

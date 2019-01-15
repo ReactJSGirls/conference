@@ -10,7 +10,7 @@ ${typography}
 
 body {
   font-family: 'Avenir Next', 'Roboto', sans-serif;
-  background: #313131;
+  background: #140e35;
   line-height: 1.33;
   color: #fff;
   overflow-x: hidden;
@@ -20,6 +20,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
   }
+}
+
+.gm-style-mtc, .gm-svpc, .gmnoprint, .gm-fullscreen-control {
+  display: none;
 }
 
 h1,
