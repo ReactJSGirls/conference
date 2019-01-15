@@ -113,14 +113,8 @@ const IndexPage = ({ data }) => {
                     Euston, Euston Square
                   </p>
                   <h4>Accessibility</h4>
-                  <p
-                    css={`
-                      margin-bottom: 20px;
-                    `}
-                  >
-                    The venue provides step-free access, and additional
-                    assistance for anyone who requires it
-                  </p>
+                  <p>The venue provides step-free access,</p>{' '}
+                  <p>and additional assistance for anyone who requires it</p>
                 </div>
                 <Map />
               </div>

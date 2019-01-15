@@ -9,47 +9,35 @@ import {
 
 var styles = [
   {
-    featureType: 'landscape.natural',
-    elementType: 'geometry.fill',
+    featureType: 'all',
+    elementType: 'all',
     stylers: [
       {
         visibility: 'on'
-      },
+      }
+    ]
+  },
+  {
+    featureType: 'administrative',
+    elementType: 'labels.text.fill',
+    stylers: [
       {
-        color: '#e0efef'
+        color: '#444444'
+      }
+    ]
+  },
+  {
+    featureType: 'landscape',
+    elementType: 'all',
+    stylers: [
+      {
+        color: '#f2f2f2'
       }
     ]
   },
   {
     featureType: 'poi',
-    elementType: 'geometry.fill',
-    stylers: [
-      {
-        visibility: 'on'
-      },
-      {
-        hue: '#1900ff'
-      },
-      {
-        color: '#c0e8e8'
-      }
-    ]
-  },
-  {
-    featureType: 'road',
-    elementType: 'geometry',
-    stylers: [
-      {
-        lightness: 100
-      },
-      {
-        visibility: 'simplified'
-      }
-    ]
-  },
-  {
-    featureType: 'road',
-    elementType: 'labels',
+    elementType: 'all',
     stylers: [
       {
         visibility: 'off'
@@ -57,23 +45,45 @@ var styles = [
     ]
   },
   {
-    featureType: 'transit.line',
-    elementType: 'geometry',
+    featureType: 'road',
+    elementType: 'all',
     stylers: [
       {
-        visibility: 'on'
+        saturation: -100
       },
       {
-        lightness: 700
+        lightness: 45
       }
     ]
   },
+  {
+    featureType: 'road.highway',
+    elementType: 'all',
+    stylers: [
+      {
+        visibility: 'simplified'
+      }
+    ]
+  },
+  {
+    featureType: 'road.arterial',
+    elementType: 'labels.icon',
+    stylers: [
+      {
+        visibility: 'off'
+      }
+    ]
+  },
+
   {
     featureType: 'water',
     elementType: 'all',
     stylers: [
       {
-        color: '#7dcdcd'
+        color: '#e8cfc7'
+      },
+      {
+        visibility: 'on'
       }
     ]
   }
@@ -100,7 +110,7 @@ const MapComponent = compose(
 )(props => (
   <GoogleMap
     defaultOptions={{ styles }}
-    defaultZoom={14}
+    defaultZoom={15}
     defaultCenter={{ lat: 51.5265124, lng: -0.1366859 }}
   >
     <Marker position={{ lat: 51.5265124, lng: -0.1366859 }} />
