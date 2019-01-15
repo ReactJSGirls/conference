@@ -3,11 +3,12 @@ import Layout from '../layout/index'
 import styled, { keyframes } from 'styled-components'
 import BG from '../assets/bg.svg'
 import PlanetA from '../assets/planet-a.svg'
+import PlanetB from '../assets/planet-b.svg'
 import Astronaut from '../assets/astronaut.svg'
 
 const Main = styled.main`
   display: grid;
-  grid-template-columns: 1fr 800px;
+  grid-template-columns: 1fr 700px;
   min-height: 100%;
 
   @media screen and (max-width: 932px) {
@@ -18,6 +19,7 @@ const Main = styled.main`
 const Title = styled.h1`
   font-size: 60px;
   margin-bottom: 11px;
+
   @media screen and (max-width: 932px) {
     max-width: 400px;
     color: white;
@@ -35,8 +37,9 @@ const Tagline = styled.p`
 `
 
 const Date = styled.span`
-  font-size: 303x;
+  font-size: 33px;
   color: #7a7f8d;
+  font-weight: 600;
 
   @media screen and (max-width: 932px) {
     color: white;
@@ -74,6 +77,51 @@ const hover = keyframes`
   }
 `
 
+const AstronautStyled = styled(Astronaut)`
+  position: absolute;
+  top: 30%;
+  right: 15%;
+  transform: translatey(0px);
+  animation: ${hover} 6s ease-in-out infinite;
+
+  @media screen and (max-width: 1130px) {
+    right: 25%;
+  }
+  @media screen and (max-width: 932px) {
+    display: none;
+  }
+`
+
+const Moon = styled(PlanetA)`
+  position: absolute;
+  top: 130px;
+  margin-left: 31px;
+
+  @media screen and (max-width: 932px) {
+    display: none;
+  }
+`
+
+const SmallMoon = styled(PlanetB)`
+  position: absolute;
+  top: 90px;
+  right: 20px;
+  @media screen and (max-width: 932px) {
+    display: none;
+  }
+`
+
+const InfoContainer = styled.main`
+  max-width: 490px;
+
+  @media screen and (max-width: 932px) {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+`
+
 const IndexPage = ({
   data: {
     contentfulWebsiteData: { conferenceName, tagline, dateAndLocation }
@@ -82,50 +130,15 @@ const IndexPage = ({
   return (
     <Layout>
       <Main>
-        <div
-          css={`
-            max-width: 400px;
-
-            @media screen and (max-width: 932px) {
-              max-width: 100%;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-end;
-            }
-          `}
-        >
+        <InfoContainer>
           <Title>{conferenceName}</Title>
           <Tagline>{tagline}</Tagline>
           <Date>{dateAndLocation}</Date>
-        </div>
+        </InfoContainer>
         <Illustration>
-          <Astronaut
-            css={`
-              position: absolute;
-              top: 30%;
-              right: 15%;
-              transform: translatey(0px);
-              animation: ${hover} 6s ease-in-out infinite;
-
-              @media screen and (max-width: 1130px) {
-                right: 25%;
-              }
-              @media screen and (max-width: 932px) {
-                display: none;
-              }
-            `}
-          />
-          <PlanetA
-            css={`
-              position: absolute;
-              top: 130px;
-              margin-left: 31px;
-
-              @media screen and (max-width: 932px) {
-                display: none;
-              }
-            `}
-          />
+          <AstronautStyled />
+          <Moon />
+          <SmallMoon />
           <BG
             css={`
               @media screen and (max-width: 932px) {
