@@ -111,6 +111,14 @@ const IndexPage = ({ data }) => {
                   >
                     30 Euston Square, London NW1 2FB
                   </p>
+                  <h4>Closest Stations</h4>
+                  <p
+                    css={`
+                      margin-bottom: 20px;
+                    `}
+                  >
+                    Euston, Euston Square
+                  </p>
                   <h4>Email</h4>
                   <p
                     css={`
@@ -126,15 +134,6 @@ const IndexPage = ({ data }) => {
                       hey@reactjsgirls.com
                     </a>
                   </p>
-                  <h4>Follow us</h4>
-                  <a href="https://twitter.com/ReactJSgirls">
-                    <Twitter
-                      css={`
-                        width: 24px;
-                        fill: #fff;
-                      `}
-                    />
-                  </a>
                 </div>
                 <Map />
               </div>
