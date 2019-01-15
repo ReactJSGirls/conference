@@ -18,7 +18,7 @@ const GirlsLogo = styled(Logo)`
 
 const H1 = styled.h1`
   color: #fb8e82;
-  font-size: 48px;
+  font-size: 58px;
   text-transform: uppercase;
   text-align: center;
 `
@@ -32,7 +32,7 @@ const Tagline = styled.p`
 `
 
 const Date = styled.span`
-  font-size: 30px;
+  font-size: 40px;
   padding-top: 40px;
   display: block;
   margin: auto;
