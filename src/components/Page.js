@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 export default styled.div`
   width: 100vw;
   height: 100vh;
-  background: #313131;
+  background: #140e35;
   color: #fff;
   ${props =>
     props.center &&
@@ -16,6 +16,6 @@ export default styled.div`
     props.light &&
     css`
       background: #fff;
-      color: #313131;
+      color: #140e35;
     `};
 `
