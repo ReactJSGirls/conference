@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 import Subscribe from './subscribe'
 import PageTitle from './PageTitle'
 
@@ -44,13 +45,7 @@ const Footer = () => (
         }
       `}
     >
-      <a
-        href="https://www.notion.so/yldeditorial/REACTJS-GIRLS-Code-of-Conduct-79c2d5f938a14ac6a885b9b77d6044f6"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        Code of Conduct
-      </a>
+      <Link to="/code-of-conduct">Code of Conduct</Link>
       <a
         href="mailto:hey@reactjsgirls.com"
         rel="noopener noreferrer"

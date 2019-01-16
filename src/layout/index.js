@@ -13,14 +13,14 @@ const query = graphql`
   }
 `
 
-const Template = ({ children }) => {
+const Template = ({ children, darkMenu }) => {
   return (
     <StaticQuery
       query={query}
       render={({ contentfulWebsiteData }) => (
         <>
           <Head {...contentfulWebsiteData} />
-          <Header />
+          <Header darkMenu={darkMenu} />
           <GlobalStyle />
           {children}
         </>

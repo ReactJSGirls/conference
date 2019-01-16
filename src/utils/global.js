@@ -11,7 +11,7 @@ ${typography}
 body {
   font-family: 'CircularStd', 'Roboto', sans-serif;
   background: #FFFFFF;
-  line-height: 1.33;
+
   color: #41495D;
   overflow-x: hidden;
 
@@ -19,6 +19,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
+      line-height: 1.5;
   }
 }
 

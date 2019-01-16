@@ -1,7 +1,7 @@
 import React from 'react'
 import Logo from '../assets/logo.svg'
-import styled from 'styled-components'
-import { StaticQuery, graphql } from 'gatsby'
+import styled, { css } from 'styled-components'
+import { StaticQuery, graphql, Link } from 'gatsby'
 
 const GirlsLogo = styled(Logo)`
   width: 45px;
@@ -39,6 +39,15 @@ const Li = styled.li`
   &:not(:last-child) {
     margin-right: 40px;
   }
+
+  ${props =>
+    props.dark &&
+    css`
+      color: #41495d;
+      a {
+        color: #41495d;
+      }
+    `}
 `
 
 const query = graphql`
@@ -51,30 +60,32 @@ const query = graphql`
   }
 `
 
-const Header = () => (
+const Header = ({ darkMenu }) => (
   <StaticQuery
     query={query}
     render={({
       contentfulWebsiteData: { conferenceName, tagline, dateAndLocation }
     }) => (
       <HeaderStyled>
-        <section
-          css={`
-            display: flex;
-            align-items: center;
-          `}
-        >
-          <GirlsLogo />
-          <p
+        <Link to="/">
+          <section
             css={`
-              @media screen and (max-width: 932px) {
-                color: white;
-              }
+              display: flex;
+              align-items: center;
             `}
           >
-            {conferenceName}
-          </p>
-        </section>
+            <GirlsLogo />
+            <p
+              css={`
+                @media screen and (max-width: 932px) {
+                  color: white;
+                }
+              `}
+            >
+              {conferenceName}
+            </p>
+          </section>{' '}
+        </Link>
 
         <nav>
           <ul
@@ -82,16 +93,16 @@ const Header = () => (
               display: flex;
             `}
           >
-            <Li>
+            <Li dark={darkMenu}>
               <a href="#about">About</a>
             </Li>
-            <Li>
+            <Li dark={darkMenu}>
               <a href="#venue">Venue</a>
             </Li>
-            <Li>
+            <Li dark={darkMenu}>
               <a href="#tickets">Tickets</a>
             </Li>
-            <Li>
+            <Li dark={darkMenu}>
               <a href="#community">Community</a>
             </Li>
           </ul>

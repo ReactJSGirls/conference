@@ -1,9 +1,19 @@
 import React from 'react'
+import styled from 'styled-components'
 import PageTitle from './PageTitle'
 import Page from './Page'
 import Button from './Button'
 
-const About = () => (
+const Communities = styled.div`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  a:not(:last-child) {
+    margin-right: 30px;
+  }
+`
+const About = ({ intro: { intro }, partners }) => (
   <div
     css={`
       background: #f3f4f9;
@@ -39,14 +49,22 @@ const About = () => (
           margin-bottom: 40px;
         `}
       >
-        Design Systems London is built by and for the community. The conference
-        is inspired by the previously organised open-source conference ReactFest
-        where Sid gave a talk on Design Systems with React. Both ReactFest and
-        DSL are brought to you by front-end and design communities from various
-        meetups and non-profit conferences - we can't thank them enough for
-        providing spaces for learning. 100% of profits will be invested back
-        into the community - have your say on this when you get your ticket.
+        {intro}
       </p>
+      <Communities>
+        {partners.map(partner => (
+          <a
+            key={partner.id}
+            rel="noopener noreferrer"
+            href={partner.link}
+            target="_blank"
+          >
+            {' '}
+            <img height="95" src={partner.logo.file.url} />
+          </a>
+        ))}
+      </Communities>
+
       <PageTitle
         css={`
           font-size: 28px;

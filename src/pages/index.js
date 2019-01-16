@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../layout/index'
 import styled from 'styled-components'
-
+import { graphql } from 'gatsby'
 import BG from '../assets/bg.svg'
 import { Illustration, AstronautStyled } from '../components/Illustration'
 import Divider from '../components/Divider'
@@ -43,7 +43,8 @@ const IndexPage = ({
       tagline,
       dateAndLocation
     },
-    contentfulVenue
+    contentfulVenue,
+    contentfulCommunity
   }
 }) => {
   return (
@@ -101,7 +102,7 @@ const IndexPage = ({
         </div>
       </div>
       <div id={'community'}>
-        <Community />
+        <Community {...contentfulCommunity} />
       </div>
       <Footer />
     </Layout>
@@ -119,6 +120,21 @@ export const query = graphql`
       }
       aboutHeadline {
         aboutHeadline
+      }
+    }
+    contentfulCommunity {
+      intro {
+        intro
+      }
+      partners {
+        id
+        link
+        logo {
+          title
+          file {
+            url
+          }
+        }
       }
     }
     contentfulVenue {
