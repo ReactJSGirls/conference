@@ -22,7 +22,6 @@ const Template = ({ children }) => {
           <Head {...contentfulWebsiteData} />
           <Header />
           <GlobalStyle />
-
           {children}
         </>
       )}

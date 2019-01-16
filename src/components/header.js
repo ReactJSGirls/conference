@@ -19,7 +19,7 @@ const GirlsLogo = styled(Logo)`
 const HeaderStyled = styled.header`
   padding-top: 20px;
 
-  width: 1160px;
+  width: 1500px;
   max-width: 90%;
   margin: auto;
   margin-bottom: 160px;
