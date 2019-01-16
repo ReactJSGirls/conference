@@ -4,8 +4,7 @@ import { InputWrapper, Input, Button } from './Form'
 
 const Form = styled.div`
   display: flex;
-  margin-top: 60px;
-  width: 100%;
+  justify-content: center;
 `
 
 const Wrapper = styled.div`
@@ -27,9 +26,7 @@ const Subscribe = () => {
         id="mc-embedded-subscribe-form"
         name="mc-embedded-subscribe-form"
         target="_blank"
-        style={{ width: '100%' }}
       >
-        <h2 style={{ textAlign: 'center' }}>Signup for news</h2>
         <Wrapper id="mc_embed_signup_scroll">
           <InputWrapper>
             <Input
@@ -58,7 +55,14 @@ const Subscribe = () => {
           </div>
           <div>
             <Button type="submit" name="subscribe" id="mc-embedded-subscribe">
-              Subscribe
+              <span
+                css={`
+                  position: relative;
+                  z-index: 1;
+                `}
+              >
+                Subscribe
+              </span>
             </Button>
           </div>
         </Wrapper>
