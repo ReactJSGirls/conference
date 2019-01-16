@@ -88,9 +88,18 @@ const Header = () => (
               display: flex;
             `}
           >
-            <Li>About</Li>
-            <Li>Tickets</Li>
-            <Li>Venue</Li>
+            <Li>
+              <a href="#about">About</a>
+            </Li>
+            <Li>
+              <a href="#venue">Venue</a>
+            </Li>
+            <Li>
+              <a href="#speakers">Speakers</a>
+            </Li>
+            <Li>
+              <a href="#tickets">Tickets</a>
+            </Li>
           </ul>
         </nav>
       </HeaderStyled>

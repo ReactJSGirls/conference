@@ -33,6 +33,11 @@ h6 {
   padding-bottom: 20px;
 }
 
+.gm-style-mtc, .gm-svpc, .gmnoprint, .gm-fullscreen-control {
+  display: none;
+}
+
+
 .video-container {
   position: relative;
   padding-bottom: calc(50% - 30px);
