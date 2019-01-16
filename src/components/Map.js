@@ -107,13 +107,13 @@ const MapComponent = compose(
   }),
   withScriptjs,
   withGoogleMap
-)(props => (
+)(({ coordinates }) => (
   <GoogleMap
     defaultOptions={{ styles }}
     defaultZoom={15}
-    defaultCenter={{ lat: 51.5265124, lng: -0.1366859 }}
+    defaultCenter={coordinates}
   >
-    <Marker position={{ lat: 51.5265124, lng: -0.1366859 }} />
+    <Marker position={coordinates} />
   </GoogleMap>
 ))
 

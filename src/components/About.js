@@ -2,7 +2,7 @@ import React from 'react'
 import PageTitle from './PageTitle'
 import Page from './Page'
 
-const About = () => (
+const About = ({ headline, text }) => (
   <div
     css={`
       background: #f3f4f9;
@@ -19,12 +19,7 @@ const About = () => (
       `}
     >
       <PageTitle>About</PageTitle>
-      <h3>
-        ReactJS Girls is one-day non-profit by-community for-community
-        conference for the JS community to celebrate React. The conference will
-        gather 300 React developers for a single-track content-rich day, where
-        women will take the stage
-      </h3>
+      <h3>{headline}</h3>
       <ul
         css={`
           margin-top: 60px;
@@ -35,18 +30,9 @@ const About = () => (
           }
         `}
       >
-        <li>
-          ReactJS Girls is a one day conference for every React developer, where
-          women-identified speakers take the stage
-        </li>
-        <li>
-          ReactJS Girls main focus is supporting the diversity community in
-          React and offer a safe place for every developer
-        </li>
-        <li>
-          The conference will gather 300 React developers for a single-track
-          content-rich day in London
-        </li>
+        {text.split('\n').map((reason, i) => (
+          <li key={i}>{reason}</li>
+        ))}
       </ul>
     </Page>
   </div>

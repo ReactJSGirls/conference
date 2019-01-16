@@ -3,7 +3,13 @@ import PageTitle from './PageTitle'
 import Page from './Page'
 import Map from './Map'
 
-const Venue = () => (
+const Venue = ({
+  name,
+  address,
+  accessibility,
+  coordinates,
+  closestStations
+}) => (
   <Page
     css={`
       background: #ffffff;
@@ -21,14 +27,14 @@ const Venue = () => (
       `}
     >
       <div>
-        <h3>30 Euston Square</h3>
+        <h3>{name}</h3>
         <h4>Address</h4>
         <p
           css={`
             margin-bottom: 20px;
           `}
         >
-          30 Euston Square, London NW1 2FB
+          {address}
         </p>
         <h4>Closest Stations</h4>
         <p
@@ -36,13 +42,14 @@ const Venue = () => (
             margin-bottom: 20px;
           `}
         >
-          Euston, Euston Square
+          {closestStations}
         </p>
         <h4>Accessibility</h4>
-        <p>The venue provides step-free access,</p>{' '}
-        <p>and additional assistance for anyone who requires it</p>
+        {accessibility.accessibility.split('\n').map((a, i) => (
+          <p key={i}>{a}</p>
+        ))}
       </div>
-      <Map />
+      <Map coordinates={{ ...coordinates, lng: coordinates.lon }} />
     </div>
   </Page>
 )

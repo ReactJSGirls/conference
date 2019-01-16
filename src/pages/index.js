@@ -36,7 +36,14 @@ const InfoContainer = styled.main`
 
 const IndexPage = ({
   data: {
-    contentfulWebsiteData: { conferenceName, tagline, dateAndLocation }
+    contentfulWebsiteData: {
+      conferenceName,
+      aboutText,
+      aboutHeadline,
+      tagline,
+      dateAndLocation
+    },
+    contentfulVenue
   }
 }) => {
   return (
@@ -77,7 +84,10 @@ const IndexPage = ({
       </Page>
       <Divider />
       <div id={'about'}>
-        <About />
+        <About
+          headline={aboutHeadline.aboutHeadline}
+          text={aboutText.aboutText}
+        />
       </div>
       <div id={'venue'}>
         <div
@@ -87,7 +97,7 @@ const IndexPage = ({
             padding-top: 0;
           `}
         >
-          <Venue />
+          <Venue {...contentfulVenue} />
         </div>
       </div>
       <div id={'community'}>
@@ -104,6 +114,24 @@ export const query = graphql`
       conferenceName
       tagline
       dateAndLocation
+      aboutText {
+        aboutText
+      }
+      aboutHeadline {
+        aboutHeadline
+      }
+    }
+    contentfulVenue {
+      address
+      accessibility {
+        accessibility
+      }
+      name
+      coordinates {
+        lon
+        lat
+      }
+      closestStations
     }
   }
 `
