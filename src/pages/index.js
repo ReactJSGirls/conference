@@ -2,8 +2,6 @@ import React from 'react'
 import Layout from '../layout/index'
 import styled, { keyframes } from 'styled-components'
 import BG from '../assets/bg.svg'
-import PlanetA from '../assets/planet-a.svg'
-import PlanetB from '../assets/planet-b.svg'
 import Astronaut from '../assets/astronaut.svg'
 
 const Main = styled.main`
@@ -92,25 +90,6 @@ const AstronautStyled = styled(Astronaut)`
   }
 `
 
-const Moon = styled(PlanetA)`
-  position: absolute;
-  top: 130px;
-  margin-left: 31px;
-
-  @media screen and (max-width: 932px) {
-    display: none;
-  }
-`
-
-const SmallMoon = styled(PlanetB)`
-  position: absolute;
-  top: 90px;
-  right: 20px;
-  @media screen and (max-width: 932px) {
-    display: none;
-  }
-`
-
 const InfoContainer = styled.main`
   max-width: 490px;
 
@@ -131,14 +110,21 @@ const IndexPage = ({
     <Layout>
       <Main>
         <InfoContainer>
-          <Title>{conferenceName}</Title>
+          <Title>
+            <span
+              css={`
+                color: #fb8e82;
+              `}
+            >
+              ReactJS Girls{' '}
+            </span>
+            {conferenceName.split('ReactJS Girls')}
+          </Title>
           <Tagline>{tagline}</Tagline>
           <Date>{dateAndLocation}</Date>
         </InfoContainer>
         <Illustration>
           <AstronautStyled />
-          <Moon />
-          <SmallMoon />
           <BG
             css={`
               @media screen and (max-width: 932px) {
