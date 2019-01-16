@@ -5,7 +5,7 @@ import ScrollableAnchor from 'react-scrollable-anchor'
 import BG from '../assets/bg.svg'
 import Astronaut from '../assets/astronaut.svg'
 import Divider from '../components/Divider'
-import Subscribe from '../components/Subscribe'
+import Subscribe from '../components/subscribe'
 
 import Map from '../components/Map'
 
