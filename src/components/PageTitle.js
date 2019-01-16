@@ -6,4 +6,5 @@ export default styled.h3`
   font-weight: 600;
   text-align: center;
   padding-bottom: 60px;
+  font-size: 46px;
 `

@@ -16,13 +16,6 @@ const GirlsLogo = styled(Logo)`
   }
 `
 
-// const H1 = styled.h1`
-//   color: #fb8e82;
-//   font-size: 48px;
-//   text-transform: uppercase;
-//   text-align: center;
-// `
-
 const HeaderStyled = styled.header`
   padding-top: 20px;
 
@@ -36,6 +29,7 @@ const HeaderStyled = styled.header`
 
 const Li = styled.li`
   color: white;
+  font-size: 18px;
 
   a {
     color: white;
@@ -95,10 +89,10 @@ const Header = () => (
               <a href="#venue">Venue</a>
             </Li>
             <Li>
-              <a href="#speakers">Speakers</a>
+              <a href="#tickets">Tickets</a>
             </Li>
             <Li>
-              <a href="#tickets">Tickets</a>
+              <a href="#community">Community</a>
             </Li>
           </ul>
         </nav>

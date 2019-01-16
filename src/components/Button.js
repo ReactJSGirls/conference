@@ -9,7 +9,7 @@ export default styled.a`
   transition: all 200ms ease;
 
   &:hover {
-    color: #313131;
+    color: #fff;
 
     &:after,
     &:before {
