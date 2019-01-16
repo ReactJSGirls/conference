@@ -8,6 +8,11 @@ export default styled.a`
   position: relative;
   transition: all 200ms ease;
 
+  span {
+    position: relative;
+    z-index: 1;
+  }
+
   &:hover {
     color: #fff;
 
@@ -27,7 +32,7 @@ export default styled.a`
     height: 100%;
     width: 0;
     background: #fb8e82;
-    z-index: -1;
+    z-index: 0;
   }
 
   &:before {

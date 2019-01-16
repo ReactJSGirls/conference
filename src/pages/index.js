@@ -1,7 +1,6 @@
 import React from 'react'
 import Layout from '../layout/index'
 import styled from 'styled-components'
-import ScrollableAnchor from 'react-scrollable-anchor'
 
 import BG from '../assets/bg.svg'
 import { Illustration, AstronautStyled } from '../components/Illustration'
@@ -11,6 +10,7 @@ import Footer from '../components/Footer'
 import Page from '../components/Page'
 import Venue from '../components/Venue'
 import Button from '../components/Button'
+import Community from '../components/Community'
 import { Title, Tagline, Date } from '../components/Type'
 
 const Main = styled.main`
@@ -66,7 +66,7 @@ const IndexPage = ({
               href="https://yld.typeform.com/to/gfZ2jc"
               target="_blank"
             >
-              Apply to speak
+              <span>Apply to speak</span>
             </Button>
           </InfoContainer>
           <Illustration>
@@ -76,10 +76,10 @@ const IndexPage = ({
         </Main>
       </Page>
       <Divider />
-      <ScrollableAnchor id={'about'}>
+      <div id={'about'}>
         <About />
-      </ScrollableAnchor>
-      <ScrollableAnchor id={'venue'}>
+      </div>
+      <div id={'venue'}>
         <div
           css={`
             padding-bottom: 110px;
@@ -89,7 +89,10 @@ const IndexPage = ({
         >
           <Venue />
         </div>
-      </ScrollableAnchor>
+      </div>
+      <div id={'community'}>
+        <Community />
+      </div>
       <Footer />
     </Layout>
   )

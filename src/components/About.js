@@ -7,7 +7,7 @@ const About = () => (
     css={`
       background: #f3f4f9;
       padding: 50px 0;
-      padding-bottom: 110px;
+      padding-bottom: 200px;
     `}
   >
     <Page
