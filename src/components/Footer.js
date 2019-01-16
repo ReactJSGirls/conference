@@ -53,6 +53,13 @@ const Footer = () => (
       >
         Contact
       </a>
+      <a
+        href="https://twitter.com/miuki_miu"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Design by Elizabet Oliveira
+      </a>
     </div>
   </FooterStyled>
 )
