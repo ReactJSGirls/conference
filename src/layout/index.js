@@ -12,7 +12,6 @@ const query = graphql`
     }
   }
 `
-
 const Template = ({ children, darkMenu }) => {
   return (
     <StaticQuery
