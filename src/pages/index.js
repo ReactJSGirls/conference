@@ -50,11 +50,11 @@ const Date = styled.span`
 `
 
 const PageTitle = styled.h3`
-  font-size: 31px;
+  font-size: 36px;
   color: #41495d;
   font-weight: 600;
   text-align: center;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 `
 
 const Illustration = styled.div`
@@ -192,11 +192,7 @@ const IndexPage = ({
             `}
           >
             <PageTitle>About</PageTitle>
-            <h3
-              css={`
-                padding-top: 40px;
-              `}
-            >
+            <h3>
               ReactJS Girls is one-day non-profit by-community for-community
               conference for the JS community to celebrate React. The conference
               will gather 300 React developers for a single-track content-rich
@@ -254,7 +250,7 @@ const IndexPage = ({
               `}
             >
               <div>
-                <h2>30 Euston Square</h2>
+                <h3>30 Euston Square</h3>
                 <h4>Address</h4>
                 <p
                   css={`
