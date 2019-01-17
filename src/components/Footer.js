@@ -24,6 +24,22 @@ const FooterStyled = styled.footer`
   }
 `
 
+const Links = styled.nav`
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+
+  a:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+`
+
 const Footer = () => (
   <FooterStyled>
     <PageTitle
@@ -34,17 +50,7 @@ const Footer = () => (
       Signup for news
     </PageTitle>
     <Subscribe />
-    <div
-      css={`
-        display: flex;
-        justify-content: center;
-        margin-top: 40px;
-
-        a:not(:last-child) {
-          margin-right: 20px;
-        }
-      `}
-    >
+    <Links>
       <Link to="/code-of-conduct">Code of Conduct</Link>
       <a
         href="mailto:hey@reactjsgirls.com"
@@ -60,7 +66,7 @@ const Footer = () => (
       >
         Design by Elizabet Oliveira
       </a>
-    </div>
+    </Links>
   </FooterStyled>
 )
 

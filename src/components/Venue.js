@@ -10,23 +10,26 @@ const Venue = ({
   coordinates,
   closestStations
 }) => (
-  <Page
-    css={`
-      background: #ffffff;
-      box-shadow: 0 72px 80px 0 rgba(45, 54, 95, 0.05);
-      padding: 50px;
-      border-radius: 20px;
-    `}
-  >
+  <Page fancy>
     <PageTitle>Venue</PageTitle>
 
     <div
       css={`
         display: grid;
         grid-template-columns: 1fr 1fr;
+
+        @media screen and (max-width: 768px) {
+          grid-template-columns: 1fr;
+        }
       `}
     >
-      <div>
+      <div
+        css={`
+          @media screen and (max-width: 768px) {
+            margin-bottom: 40px;
+          }
+        `}
+      >
         <h3>{name}</h3>
         <h4>Address</h4>
         <p

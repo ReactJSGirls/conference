@@ -21,14 +21,7 @@ const About = ({ intro: { intro }, partners }) => (
       padding-bottom: 200px;
     `}
   >
-    <Page
-      css={`
-        background: #ffffff;
-        box-shadow: 0 72px 80px 0 rgba(45, 54, 95, 0.05);
-        padding: 50px;
-        border-radius: 20px;
-      `}
-    >
+    <Page fancy>
       <PageTitle>Community & Sponsors</PageTitle>
       <p>
         We have a small number of diversity tickets available to those from

@@ -8,18 +8,22 @@ ${font}
 ${reset}
 ${typography}
 
+html, body {
+    height: 100%;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 body {
   font-family: 'CircularStd', 'Roboto', sans-serif;
   background: #FFFFFF;
-
   color: #41495D;
-  overflow-x: hidden;
 
   * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
-      line-height: 1.5;
+    line-height: 1.5;
   }
 }
 

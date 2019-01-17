@@ -10,14 +10,7 @@ const About = ({ headline, text }) => (
       padding-bottom: 200px;
     `}
   >
-    <Page
-      css={`
-        background: #ffffff;
-        box-shadow: 0 72px 80px 0 rgba(45, 54, 95, 0.05);
-        padding: 50px;
-        border-radius: 20px;
-      `}
-    >
+    <Page fancy>
       <PageTitle>About</PageTitle>
       <h3>{headline}</h3>
       <ul

@@ -23,6 +23,10 @@ const Main = styled.main`
     grid-template-columns: 1fr;
     grid-template-rows: 400px 1fr;
   }
+
+  @media screen and (max-width: 767px) {
+    grid-template-rows: 200px 1fr;
+  }
 `
 
 const InfoContainer = styled.main`
