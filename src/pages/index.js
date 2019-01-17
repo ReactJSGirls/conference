@@ -81,7 +81,20 @@ const IndexPage = ({
             </Button>
           </InfoContainer>
           <Illustration>
-            <AstronautStyled />
+            <AstronautStyled
+              css={`
+                @media screen and (max-width: 1023px) {
+                  position: relative;
+                  z-index: 3;
+                  float: right;
+                  right: 8%;
+                  max-width: 50%;
+                }
+                @media screen and (max-width: 460px) {
+                  margin-top: 60px;
+                }
+              `}
+            />
             <BG
               css={`
                 @media screen and (max-width: 1023px) {
@@ -95,6 +108,16 @@ const IndexPage = ({
                 @media screen and (min-width: 1024px) {
                   display: none;
                 }
+
+                @media screen and (max-width: 460px) {
+                  max-width: 200%;
+                  left: 10px;
+                }
+                width: 660px;
+                height: auto;
+                max-width: 110%;
+                position: absolute;
+                right: -10px;
               `}
             />
           </Illustration>

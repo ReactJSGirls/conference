@@ -31,7 +31,13 @@ h5,
 h6 {
   font-family: 'CircularStd', sans-serif;
   font-weight: 600;
+  line-height: 1.2;
   padding-bottom: 20px;
+
+  span {
+      line-height: 1.2;
+  }
+
 }
 
 .gm-style-mtc, .gm-svpc, .gmnoprint, .gm-fullscreen-control {
