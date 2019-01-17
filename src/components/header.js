@@ -1,7 +1,18 @@
 import React, { useState } from 'react'
 import Logo from '../assets/logo.svg'
-import styled, { css } from 'styled-components'
+import styled, { css, createGlobalStyle } from 'styled-components'
 import { StaticQuery, graphql, Link } from 'gatsby'
+
+const OverlayStyles = createGlobalStyle`
+  ${props =>
+    props.open &&
+    css`
+      body {
+        height: 100vh;
+        overflow: hidden;
+      }
+    `}
+`
 
 const GirlsLogo = styled(Logo)`
   width: 45px;
@@ -179,6 +190,7 @@ const Header = ({ darkMenu }) => {
               <p>{conferenceName}</p>
             </section>{' '}
           </Link>
+          <OverlayStyles open={menuOpen} />
           <MobileMenuOpen
             onClick={() => setMenu(!menuOpen)}
             open={menuOpen}
