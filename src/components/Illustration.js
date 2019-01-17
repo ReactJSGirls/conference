@@ -8,15 +8,13 @@ export const Illustration = styled.div`
   z-index: -1;
 
   @media screen and (max-width: 1130px) {
-    right: -100px;
-  }
-
-  @media screen and (max-width: 1130px) {
     right: -150px;
   }
 
-  @media screen and (max-width: 932px) {
-    right: 0;
+  @media screen and (max-width: 1023px) {
+    right: -5%;
+    top: 60px;
+    position: relative;
   }
 `
 
@@ -41,8 +39,5 @@ export const AstronautStyled = styled(Astronaut)`
 
   @media screen and (max-width: 1130px) {
     right: 25%;
-  }
-  @media screen and (max-width: 932px) {
-    display: none;
   }
 `

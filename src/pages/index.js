@@ -3,6 +3,7 @@ import Layout from '../layout/index'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import BG from '../assets/bg.svg'
+import MobileBG from '../assets/mobile-bg.svg'
 import { Illustration, AstronautStyled } from '../components/Illustration'
 import Divider from '../components/Divider'
 import About from '../components/About'
@@ -18,19 +19,21 @@ const Main = styled.main`
   grid-template-columns: 1fr 700px;
   min-height: 100%;
 
-  @media screen and (max-width: 932px) {
+  @media screen and (max-width: 1023px) {
     grid-template-columns: 1fr;
+    grid-template-rows: 400px 1fr;
   }
 `
 
 const InfoContainer = styled.main`
   max-width: 490px;
 
-  @media screen and (max-width: 932px) {
-    max-width: 100%;
+  @media screen and (max-width: 1023px) {
     display: flex;
+    margin: auto;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+    text-align: center;
   }
 `
 
@@ -79,7 +82,21 @@ const IndexPage = ({
           </InfoContainer>
           <Illustration>
             <AstronautStyled />
-            <BG />
+            <BG
+              css={`
+                @media screen and (max-width: 1023px) {
+                  display: none;
+                }
+              `}
+            />
+
+            <MobileBG
+              css={`
+                @media screen and (min-width: 1024px) {
+                  display: none;
+                }
+              `}
+            />
           </Illustration>
         </Main>
       </Page>
