@@ -12,6 +12,12 @@ const Communities = styled.div`
   a:not(:last-child) {
     margin-right: 30px;
   }
+
+  @media screen and (max-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
 `
 const About = ({ intro: { intro }, partners }) => (
   <div
