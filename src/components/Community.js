@@ -103,7 +103,7 @@ const About = ({ intro: { intro }, partners }) => (
       </p>
       <Button
         rel="noopener noreferrer"
-        href="mailto:sponsor@reactjsgirls.com"
+        href="https://yld.typeform.com/to/xz4xYb"
         target="_blank"
       >
         <span>Sponsor the event</span>
