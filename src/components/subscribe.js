@@ -53,18 +53,16 @@ const Subscribe = () => {
               tabIndex="-1"
             />
           </div>
-          <div>
-            <Button type="submit" name="subscribe" id="mc-embedded-subscribe">
-              <span
-                css={`
-                  position: relative;
-                  z-index: 1;
-                `}
-              >
-                Subscribe
-              </span>
-            </Button>
-          </div>
+          <Button type="submit" name="subscribe" id="mc-embedded-subscribe">
+            <span
+              css={`
+                position: relative;
+                z-index: 1;
+              `}
+            >
+              Subscribe
+            </span>
+          </Button>
         </Wrapper>
       </form>
     </Form>

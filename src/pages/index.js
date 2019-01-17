@@ -41,6 +41,22 @@ const InfoContainer = styled.main`
   }
 `
 
+const MobileImage = styled(MobileBG)`
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 460px) {
+    max-width: 200%;
+    left: 10px;
+  }
+  width: 660px;
+  height: auto;
+  max-width: 110%;
+  position: absolute;
+  right: -10px;
+`
+
 const IndexPage = ({
   data: {
     contentfulWebsiteData: {
@@ -85,20 +101,7 @@ const IndexPage = ({
             </Button>
           </InfoContainer>
           <Illustration>
-            <AstronautStyled
-              css={`
-                @media screen and (max-width: 1023px) {
-                  position: relative;
-                  z-index: 3;
-                  float: right;
-                  right: 8%;
-                  max-width: 50%;
-                }
-                @media screen and (max-width: 460px) {
-                  margin-top: 60px;
-                }
-              `}
-            />
+            <AstronautStyled />
             <BG
               css={`
                 @media screen and (max-width: 1023px) {
@@ -107,34 +110,18 @@ const IndexPage = ({
               `}
             />
 
-            <MobileBG
-              css={`
-                @media screen and (min-width: 1024px) {
-                  display: none;
-                }
-
-                @media screen and (max-width: 460px) {
-                  max-width: 200%;
-                  left: 10px;
-                }
-                width: 660px;
-                height: auto;
-                max-width: 110%;
-                position: absolute;
-                right: -10px;
-              `}
-            />
+            <MobileImage />
           </Illustration>
         </Main>
       </Page>
       <Divider />
-      <div id={'about'}>
+      <div id="about">
         <About
           headline={aboutHeadline.aboutHeadline}
           text={aboutText.aboutText}
         />
       </div>
-      <div id={'venue'}>
+      <div id="venue">
         <div
           css={`
             padding-bottom: 110px;
@@ -145,7 +132,7 @@ const IndexPage = ({
           <Venue {...contentfulVenue} />
         </div>
       </div>
-      <div id={'community'}>
+      <div id="community">
         <Community {...contentfulCommunity} />
       </div>
       <Footer />

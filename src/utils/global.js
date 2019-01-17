@@ -9,7 +9,6 @@ ${reset}
 ${typography}
 
 html, body {
-    height: 100%;
     width: 100vw;
     overflow-x: hidden;
 }

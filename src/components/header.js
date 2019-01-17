@@ -75,7 +75,15 @@ const Header = ({ darkMenu }) => {
               `}
             >
               <GirlsLogo />
-              <p>{conferenceName}</p>
+              <p
+                css={`
+                  @media screen and (max-width: 767px) {
+                    display: none;
+                  }
+                `}
+              >
+                {conferenceName}
+              </p>
             </section>{' '}
           </Link>
           <OverlayStyles open={menuOpen} />
@@ -86,6 +94,8 @@ const Header = ({ darkMenu }) => {
           />
           <nav
             css={`
+              z-index: 1;
+              position: relative;
               @media screen and (max-width: 768px) {
                 display: none;
               }

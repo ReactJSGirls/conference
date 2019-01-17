@@ -55,7 +55,7 @@ export const Button = styled.button`
   text-decoration: none;
   background: transparent;
   border: 3px solid #fb8e82;
-  padding: 10px 15px;
+  padding: 7px 15px;
   position: relative;
   transition: all 200ms ease;
   color: white;

@@ -36,10 +36,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
    border-spacing: 0;
  }
 
- html, body, #___gatsby, #___gatsby>div {
-   height: 100%;
- }
-
  body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6 {
    font-size-adjust: 0.5;
  }
