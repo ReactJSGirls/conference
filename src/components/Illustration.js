@@ -16,6 +16,10 @@ export const Illustration = styled.div`
     top: 60px;
     position: relative;
   }
+
+  @media screen and (max-width: 321px) {
+    top: 0;
+  }
 `
 
 const hover = keyframes`
@@ -51,5 +55,9 @@ export const AstronautStyled = styled(Astronaut)`
 
   @media screen and (max-width: 460px) {
     margin-top: 60px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-top: 0px;
   }
 `

@@ -14,6 +14,10 @@ export const HeaderStyled = styled.header`
   @media screen and (max-width: 1023px) {
     margin-bottom: 40px;
   }
+
+  @media screen and (max-width: 321px) {
+    margin-bottom: 20px;
+  }
 `
 
 export const Li = styled.li`

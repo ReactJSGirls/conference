@@ -2,10 +2,16 @@ import styled from 'styled-components'
 
 export const Title = styled.h1`
   font-size: 60px;
-  margin-bottom: 11px;
+  margin-bottom: 10px;
 
   @media screen and (max-width: 767px) {
     font-size: 30px;
+  }
+
+  @media screen and (max-width: 321px) {
+    font-size: 24px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
   }
 `
 
@@ -16,6 +22,10 @@ export const Tagline = styled.p`
 
   @media screen and (max-width: 767px) {
     font-size: 16px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 10px;
   }
 `
 

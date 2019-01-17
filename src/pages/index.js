@@ -92,6 +92,10 @@ const IndexPage = ({
                 display: block;
                 width: 150px;
                 margin-top: 20px;
+
+                @media screen and (max-width: 767px) {
+                  margin-top: 10px;
+                }
               `}
               rel="noopener noreferrer"
               href="https://yld.typeform.com/to/gfZ2jc"
