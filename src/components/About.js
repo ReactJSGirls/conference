@@ -8,7 +8,7 @@ const About = ({ headline, text, history }) => (
     css={`
       background: #f3f4f9;
       padding: 50px 0;
-      padding-bottom: 200px;
+      padding-bottom: 100px;
     `}
   >
     <Page

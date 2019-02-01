@@ -130,7 +130,7 @@ const IndexPage = ({
       <div id="venue">
         <div
           css={`
-            padding-bottom: 110px;
+            padding-bottom: 100px;
             background: #f3f4f9;
             padding-top: 0;
           `}

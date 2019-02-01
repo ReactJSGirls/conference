@@ -12,7 +12,7 @@ export const Illustration = styled.div`
   }
 
   @media screen and (max-width: 1023px) {
-    right: -5%;
+    right: -15%;
     top: 60px;
     position: relative;
   }

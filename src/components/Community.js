@@ -31,7 +31,8 @@ const About = ({
     css={`
       background: #f3f4f9;
       padding: 50px 0;
-      padding-bottom: 200px;
+      padding-bottom: 100px;
+      padding-top: 0;
     `}
   >
     <Page fancy>
