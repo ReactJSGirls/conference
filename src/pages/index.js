@@ -1,77 +1,204 @@
 import React from 'react'
-import Subscribe from '../components/subscribe'
 import Layout from '../layout/index'
 import styled from 'styled-components'
-import YLD from '../assets/yld.svg'
-import Button from '../components/Button'
+import { graphql } from 'gatsby'
+import BG from '../assets/bg.svg'
+import MobileBG from '../assets/mobile-bg.svg'
+import { Illustration, AstronautStyled } from '../components/Illustration'
+import Divider from '../components/Divider'
+import About from '../components/About'
 import Footer from '../components/Footer'
+import Page from '../components/Page'
+import Venue from '../components/Venue'
+import Button from '../components/Button'
+import Community from '../components/Community'
+import { Title, Tagline, Date } from '../components/Type'
 
 const Main = styled.main`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 700px;
   min-height: 100%;
-`
-const Content = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-  flex-grow: 1;
+
+  @media screen and (max-width: 1023px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 1fr;
+  }
+
+  @media screen and (max-width: 767px) {
+    grid-template-rows: 200px 1fr;
+  }
 `
 
-const Buttons = styled.section`
-  display: flex;
-  margin-top: 30px;
+const InfoContainer = styled.main`
+  max-width: 490px;
+
+  @media screen and (max-width: 1023px) {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 `
 
-const LogoWrapper = styled.a`
-  display: flex;
-  align-items: center;
-  margin-top: 50px;
+const MobileImage = styled(MobileBG)`
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 460px) {
+    max-width: 200%;
+    left: 10px;
+  }
+  width: 660px;
+  height: auto;
+  max-width: 110%;
+  position: absolute;
+  right: -10px;
 `
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({
+  data: {
+    contentfulWebsiteData: {
+      conferenceName,
+      aboutText,
+      aboutHeadline,
+      history,
+      tagline,
+      dateAndLocation
+    },
+    contentfulVenue,
+    contentfulCommunity
+  }
+}) => {
   return (
     <Layout>
-      <Main>
-        <Content>
-          <Buttons>
+      <Page>
+        <Main>
+          <InfoContainer>
+            <Title>
+              <span
+                css={`
+                  color: #fb8e82;
+                `}
+              >
+                ReactJS Girls{' '}
+              </span>
+              {conferenceName.split('ReactJS Girls')}
+            </Title>
+            <Tagline>{tagline}</Tagline>
+            <Date>{dateAndLocation}</Date>
             <Button
+              css={`
+                display: block;
+                width: 150px;
+                margin-top: 20px;
+
+                @media screen and (max-width: 767px) {
+                  margin-top: 10px;
+                }
+              `}
               rel="noopener noreferrer"
               href="https://yld.typeform.com/to/gfZ2jc"
               target="_blank"
             >
-              Apply to speak
+              <span>Apply to speak</span>
             </Button>
-            <Button
-              rel="noopener noreferrer"
-              href="mailto:sponsor@reactjsgirls.com"
-              target="_blank"
-            >
-              Sponsor the event
-            </Button>
-          </Buttons>
-          <Subscribe />
-          <LogoWrapper
-            href="https://yld.io"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Organised by{' '}
-            <YLD
-              style={{
-                marginLeft: -15,
-                marginRight: -20,
-                transform: 'scale(0.5)'
-              }}
+          </InfoContainer>
+          <Illustration>
+            <AstronautStyled />
+            <BG
+              css={`
+                @media screen and (max-width: 1023px) {
+                  display: none;
+                }
+              `}
             />
-          </LogoWrapper>
-        </Content>
-        <Footer />
-      </Main>
+
+            <MobileImage />
+          </Illustration>
+        </Main>
+      </Page>
+      <Divider />
+      <div id="about">
+        <About
+          headline={aboutHeadline.aboutHeadline}
+          history={history.history}
+          text={aboutText.aboutText}
+        />
+      </div>
+      <div id="venue">
+        <div
+          css={`
+            padding-bottom: 100px;
+            background: #f3f4f9;
+            padding-top: 0;
+          `}
+        >
+          <Venue {...contentfulVenue} />
+        </div>
+      </div>
+      <div id="community">
+        <Community {...contentfulCommunity} />
+      </div>
+      <Footer />
     </Layout>
   )
 }
+
+export const query = graphql`
+  query {
+    contentfulWebsiteData {
+      conferenceName
+      tagline
+      dateAndLocation
+      aboutText {
+        aboutText
+      }
+      history {
+        history
+      }
+      aboutHeadline {
+        aboutHeadline
+      }
+    }
+    contentfulCommunity {
+      intro {
+        intro
+      }
+      diversityText {
+        diversityText
+      }
+      joinConversation {
+        joinConversation
+      }
+      sponsorsThankYou {
+        sponsorsThankYou
+      }
+      partners {
+        id
+        link
+        logo {
+          title
+          file {
+            url
+          }
+        }
+      }
+    }
+    contentfulVenue {
+      address
+      accessibility {
+        accessibility
+      }
+      name
+      coordinates {
+        lon
+        lat
+      }
+      closestStations
+    }
+  }
+`
 
 export default IndexPage

@@ -45,7 +45,6 @@ export const InputWrapper = styled.div`
     left: 20px;
     color: #333;
     font-size: 20px;
-    font-family: 'Dank Mono';
     opacity: 0;
   }
 `
@@ -56,12 +55,13 @@ export const Button = styled.button`
   text-decoration: none;
   background: transparent;
   border: 3px solid #fb8e82;
-  padding: 10px 15px;
+  padding: 7px 15px;
   position: relative;
   transition: all 200ms ease;
   color: white;
   font-size: 100%;
   border-left: none;
+  cursor: pointer;
 
   @media screen and (max-width: 600px) {
     border-left: 3px solid #fb8e82;
@@ -87,7 +87,7 @@ export const Button = styled.button`
     height: 100%;
     width: 0;
     background: #fb8e82;
-    z-index: -1;
+    z-index: 0;
   }
 
   &:before {

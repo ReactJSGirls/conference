@@ -1,25 +1,48 @@
 import { createGlobalStyle } from 'styled-components'
-import dank from './css/dank-mono.js'
 import typography from './css/type.js'
 import reset from './css/reset.js'
+import font from 'circular-std'
 
 export default createGlobalStyle`
-${dank}
+${font}
 ${reset}
 ${typography}
 
+html, body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 body {
-  font-family: 'Avenir Next', 'Roboto', sans-serif;
-  background: #313131;
-  line-height: 1.33;
-  color: #fff;
-  overflow-x: hidden;
+  font-family: 'CircularStd', 'Roboto', sans-serif;
+  background: #FFFFFF;
+  color: #41495D;
 
   * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
+    line-height: 1.5;
   }
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.markdown em {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.markdown img {
+  width: 100px;
+  margin-right: 20px;
 }
 
 h1,
@@ -28,10 +51,21 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Dank Mono', sans-serif;
-  font-weight: 700;
+  font-family: 'CircularStd', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
   padding-bottom: 20px;
+
+  span {
+      line-height: 1.2;
+  }
+
 }
+
+.gm-style-mtc, .gm-svpc, .gmnoprint, .gm-fullscreen-control {
+  display: none;
+}
+
 
 .video-container {
   position: relative;

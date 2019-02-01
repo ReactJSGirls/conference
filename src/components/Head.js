@@ -7,22 +7,13 @@ const Head = ({ seoTitle, seoDescription }) => (
     <title>{seoTitle}</title>
     <meta name="description" content={seoDescription} />
     <meta charset="utf-8" />
-    <meta
-      name="image"
-      content="https://rawcdn.githack.com/ReactJSGirls/conference/e0eb639f54f8b18c83177c6b44ab2199b09665d9/src/assets/logo.png"
-    />
+    <meta name="image" content="https://i.imgur.com/snwQ653.png" />
     <meta itemProp="name" content={seoTitle} />
     <meta itemProp="description" content={seoDescription} />
-    <meta
-      itemProp="image"
-      content="https://rawcdn.githack.com/ReactJSGirls/conference/e0eb639f54f8b18c83177c6b44ab2199b09665d9/src/assets/logo.png"
-    />
+    <meta itemProp="image" content="https://i.imgur.com/snwQ653.png" />
     <meta name="og:title" content={seoTitle} />
     <meta name="og:description" content={seoDescription} />
-    <meta
-      name="og:image"
-      content="https://rawcdn.githack.com/ReactJSGirls/conference/e0eb639f54f8b18c83177c6b44ab2199b09665d9/src/assets/logo.png"
-    />
+    <meta name="og:image" content="https://i.imgur.com/snwQ653.png" />
     <meta name="og:url" content="https://reactjsgirls.com" />
     <meta name="og:site_name" content={seoTitle} />
     <meta name="og:type" content="website" />
