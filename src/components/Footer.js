@@ -29,6 +29,10 @@ const Links = styled.nav`
   justify-content: center;
   margin-top: 40px;
 
+  a {
+    color: white;
+  }
+
   a:not(:last-child) {
     margin-right: 20px;
   }
@@ -59,12 +63,27 @@ const Footer = () => (
       >
         Contact
       </a>
+      Design by
       <a
+        css={`
+          margin: 0 5px !important;
+        `}
         href="https://twitter.com/miuki_miu"
         rel="noopener noreferrer"
         target="_blank"
       >
-        Design by Elizabet Oliveira
+        Elizabet Oliveira
+      </a>
+      &
+      <a
+        css={`
+          margin: 0 5px;
+        `}
+        href="https://dribbble.com/jameshevey"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        James Hevey
       </a>
     </Links>
   </FooterStyled>

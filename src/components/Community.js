@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import PageTitle from './PageTitle'
 import Page from './Page'
+import ReactMarkdown from 'react-markdown'
 import Button from './Button'
 
 const Communities = styled.div`
@@ -19,7 +20,13 @@ const Communities = styled.div`
     grid-gap: 20px;
   }
 `
-const About = ({ intro: { intro }, partners }) => (
+const About = ({
+  intro: { intro },
+  partners,
+  diversityText: { diversityText },
+  joinConversation: { joinConversation },
+  sponsorsThankYou: { sponsorsThankYou }
+}) => (
   <div
     css={`
       background: #f3f4f9;
@@ -30,9 +37,7 @@ const About = ({ intro: { intro }, partners }) => (
     <Page fancy>
       <PageTitle>Community & Sponsors</PageTitle>
       <p>
-        We have a small number of diversity tickets available to those from
-        underrepresented backgrounds (including but not limited to women, people
-        of colour, LGBTQIA+ or disabled people).
+        <ReactMarkdown source={diversityText} />
       </p>
       <PageTitle
         css={`
@@ -48,7 +53,7 @@ const About = ({ intro: { intro }, partners }) => (
           margin-bottom: 40px;
         `}
       >
-        {intro}
+        <ReactMarkdown source={intro} />
       </p>
       <Communities>
         {partners.map(partner => (
@@ -73,10 +78,7 @@ const About = ({ intro: { intro }, partners }) => (
       >
         Partners
       </PageTitle>
-      <p>
-        Thank you to our partners and sponsors for investing into our diverse
-        design and engineering community:
-      </p>
+      <ReactMarkdown source={sponsorsThankYou} />
       <h4
         css={`
           margin-top: 20px;
@@ -97,8 +99,7 @@ const About = ({ intro: { intro }, partners }) => (
           margin: 40px 0;
         `}
       >
-        Join the conversation with 300 React developers discussing the future of
-        react.
+        <ReactMarkdown source={joinConversation} />
       </p>
       <Button
         rel="noopener noreferrer"

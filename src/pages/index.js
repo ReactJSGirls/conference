@@ -63,6 +63,7 @@ const IndexPage = ({
       conferenceName,
       aboutText,
       aboutHeadline,
+      history,
       tagline,
       dateAndLocation
     },
@@ -122,6 +123,7 @@ const IndexPage = ({
       <div id="about">
         <About
           headline={aboutHeadline.aboutHeadline}
+          history={history.history}
           text={aboutText.aboutText}
         />
       </div>
@@ -153,6 +155,9 @@ export const query = graphql`
       aboutText {
         aboutText
       }
+      history {
+        history
+      }
       aboutHeadline {
         aboutHeadline
       }
@@ -160,6 +165,15 @@ export const query = graphql`
     contentfulCommunity {
       intro {
         intro
+      }
+      diversityText {
+        diversityText
+      }
+      joinConversation {
+        joinConversation
+      }
+      sponsorsThankYou {
+        sponsorsThankYou
       }
       partners {
         id

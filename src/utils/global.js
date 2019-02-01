@@ -26,6 +26,25 @@ body {
   }
 }
 
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.markdown em {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.markdown img {
+  width: 100px;
+  margin-right: 20px;
+}
+
 h1,
 h2,
 h3,

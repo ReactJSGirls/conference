@@ -17,8 +17,8 @@ const OverlayStyles = createGlobalStyle`
 `
 
 const GirlsLogo = styled(Logo)`
-  width: 45px;
-  height: 40px;
+  width: 65px;
+  height: 65px;
   display: block;
   transform: rotate(0deg);
   transition: transform 500ms ease;
@@ -77,12 +77,23 @@ const Header = ({ darkMenu }) => {
               <GirlsLogo />
               <p
                 css={`
+                  font-weight: 600;
+                  font-size: 16px;
                   @media screen and (max-width: 767px) {
                     display: none;
                   }
                 `}
               >
-                {conferenceName}
+                <span
+                  css={`
+                    display: block;
+                    line-height: 1;
+                    color: #fb8e82;
+                  `}
+                >
+                  ReactJS Girls{' '}
+                </span>
+                {conferenceName.split('ReactJS Girls')}
               </p>
             </section>{' '}
           </Link>
