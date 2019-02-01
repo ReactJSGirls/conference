@@ -10,51 +10,57 @@ const Venue = ({
   coordinates,
   closestStations
 }) => (
-  <Page fancy>
-    <PageTitle>Venue</PageTitle>
+  <div
+    css={`
+      background: white;
+    `}
+  >
+    <Page>
+      <PageTitle>Venue</PageTitle>
 
-    <div
-      css={`
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-
-        @media screen and (max-width: 768px) {
-          grid-template-columns: 1fr;
-        }
-      `}
-    >
       <div
         css={`
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+
           @media screen and (max-width: 768px) {
-            margin-bottom: 40px;
+            grid-template-columns: 1fr;
           }
         `}
       >
-        <h3>{name}</h3>
-        <h4>Address</h4>
-        <p
+        <div
           css={`
-            margin-bottom: 20px;
+            @media screen and (max-width: 768px) {
+              margin-bottom: 40px;
+            }
           `}
         >
-          {address}
-        </p>
-        <h4>Closest Stations</h4>
-        <p
-          css={`
-            margin-bottom: 20px;
-          `}
-        >
-          {closestStations}
-        </p>
-        <h4>Accessibility</h4>
-        {accessibility.accessibility.split('\n').map((a, i) => (
-          <p key={i}>{a}</p>
-        ))}
+          <h3>{name}</h3>
+          <h4>Address</h4>
+          <p
+            css={`
+              margin-bottom: 20px;
+            `}
+          >
+            {address}
+          </p>
+          <h4>Closest Stations</h4>
+          <p
+            css={`
+              margin-bottom: 20px;
+            `}
+          >
+            {closestStations}
+          </p>
+          <h4>Accessibility</h4>
+          {accessibility.accessibility.split('\n').map((a, i) => (
+            <p key={i}>{a}</p>
+          ))}
+        </div>
+        <Map coordinates={{ ...coordinates, lng: coordinates.lon }} />
       </div>
-      <Map coordinates={{ ...coordinates, lng: coordinates.lon }} />
-    </div>
-  </Page>
+    </Page>
+  </div>
 )
 
 export default Venue
