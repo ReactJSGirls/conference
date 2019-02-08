@@ -43,13 +43,12 @@ const About = ({
       >
         Community
       </PageTitle>
-      <p
+      <ReactMarkdown
         css={`
           margin-bottom: 40px;
         `}
-      >
-        <ReactMarkdown source={intro} />
-      </p>
+        source={intro}
+      />
       <Communities>
         {partners.map(partner => (
           <a
