@@ -5,10 +5,6 @@ export const Title = styled.h1`
   margin-bottom: 10px;
   color: white;
 
-  @media screen and (max-width: 767px) {
-    font-size: 30px;
-  }
-
   @media screen and (max-width: 321px) {
     font-size: 24px;
     padding-bottom: 10px;
@@ -19,15 +15,9 @@ export const Title = styled.h1`
 export const Tagline = styled.p`
   font-size: 24px;
   color: white;
-  margin-bottom: 20px;
-
-  @media screen and (max-width: 767px) {
-    font-size: 16px;
-  }
-
-  @media screen and (max-width: 767px) {
-    margin-bottom: 10px;
-  }
+  padding-bottom: 20px;
+  max-width: 500px;
+  margin: auto;
 `
 
 export const Date = styled.span`

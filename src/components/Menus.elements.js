@@ -54,6 +54,7 @@ export const MobileNav = styled.nav`
       transform: scale(1);
       opacity: 1;
       visibility: visible;
+      z-index: 99;
     `}
 
   ul {
@@ -99,20 +100,15 @@ export const MobileMenuOpen = styled.button`
   height: 20px;
   cursor: pointer;
   outline: none;
-
-  ${props =>
-    props.open &&
-    css`
-      ${Transform}
-    `}
+  z-index: 100;
 
   &:before,
   &:after {
     content: '';
     display: block;
-    width: 20px;
-    height: 2px;
-    background: #41495d;
+    width: 24px;
+    height: 4px;
+    background: #fff;
     position: relative;
     transition: all 200ms ease;
   }
@@ -120,6 +116,17 @@ export const MobileMenuOpen = styled.button`
   &:after {
     top: 8px;
   }
+
+  ${props =>
+    props.open &&
+    css`
+      ${Transform}
+
+      &:before,
+      &:after {
+        background: #41495d;
+      }
+    `}
 
   @media screen and (min-width: 769px) {
     display: none;
