@@ -2,22 +2,8 @@ import styled, { css } from 'styled-components'
 
 export const HeaderStyled = styled.header`
   padding-top: 20px;
-
-  width: 1500px;
-  max-width: 90%;
   margin: auto;
-  margin-bottom: 160px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  @media screen and (max-width: 1023px) {
-    margin-bottom: 40px;
-  }
-
-  @media screen and (max-width: 321px) {
-    margin-bottom: 20px;
-  }
+  background: #232c3d;
 `
 
 export const Li = styled.li`

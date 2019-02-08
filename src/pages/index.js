@@ -2,10 +2,6 @@ import React from 'react'
 import Layout from '../layout/index'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
-import BG from '../assets/bg.svg'
-import MobileBG from '../assets/mobile-bg.svg'
-import { Illustration, AstronautStyled } from '../components/Illustration'
-import Divider from '../components/Divider'
 import About from '../components/About'
 import Footer from '../components/Footer'
 import Page from '../components/Page'
@@ -13,25 +9,29 @@ import Venue from '../components/Venue'
 import Button from '../components/Button'
 import Community from '../components/Community'
 import { Title, Tagline, Date } from '../components/Type'
+import Logo from '../assets/logo.svg'
 
+const GirlsLogo = styled(Logo)`
+  width: 140px;
+  height: 140px;
+  display: block;
+  margin: auto;
+  transform: rotate(0deg);
+  transition: transform 500ms ease;
+  position: relative;
+  z-index: 10;
+  margin-bottom: 40px;
+
+  &:hover {
+    transform: rotate(360deg);
+  }
+`
 const Main = styled.main`
-  display: grid;
   grid-template-columns: 1fr 700px;
   min-height: 100%;
-
-  @media screen and (max-width: 1023px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 400px 1fr;
-  }
-
-  @media screen and (max-width: 767px) {
-    grid-template-rows: 200px 1fr;
-  }
 `
 
 const InfoContainer = styled.main`
-  max-width: 490px;
-
   @media screen and (max-width: 1023px) {
     display: flex;
     margin: auto;
@@ -40,23 +40,6 @@ const InfoContainer = styled.main`
     text-align: center;
   }
 `
-
-const MobileImage = styled(MobileBG)`
-  @media screen and (min-width: 1024px) {
-    display: none;
-  }
-
-  @media screen and (max-width: 460px) {
-    max-width: 200%;
-    left: 10px;
-  }
-  width: 660px;
-  height: auto;
-  max-width: 110%;
-  position: absolute;
-  right: -10px;
-`
-
 const IndexPage = ({
   data: {
     contentfulWebsiteData: {
@@ -73,53 +56,52 @@ const IndexPage = ({
 }) => {
   return (
     <Layout>
-      <Page>
-        <Main>
-          <InfoContainer>
-            <Title>
-              <span
+      <div
+        css={`
+          background: #232c3d;
+          text-align: center;
+          padding: 60px 0;
+          min-height: 100vh;
+        `}
+      >
+        <Page>
+          <Main>
+            <InfoContainer>
+              <Title>
+                <GirlsLogo />
+                <span
+                  css={`
+                    color: #fb8e82;
+                  `}
+                >
+                  ReactJS Girls{' '}
+                </span>
+                {conferenceName.split('ReactJS Girls')}
+              </Title>
+              <Tagline>{tagline}</Tagline>
+              <Date>{dateAndLocation}</Date>
+              <Button
                 css={`
-                  color: #fb8e82;
+                  display: block;
+                  width: 200px;
+                  margin-top: 20px;
+                  margin: auto;
+                  margin-top: 50px;
+
+                  @media screen and (max-width: 767px) {
+                    margin-top: 10px;
+                  }
                 `}
+                rel="noopener noreferrer"
+                href="https://yld.typeform.com/to/gfZ2jc"
+                target="_blank"
               >
-                ReactJS Girls{' '}
-              </span>
-              {conferenceName.split('ReactJS Girls')}
-            </Title>
-            <Tagline>{tagline}</Tagline>
-            <Date>{dateAndLocation}</Date>
-            <Button
-              css={`
-                display: block;
-                width: 150px;
-                margin-top: 20px;
-
-                @media screen and (max-width: 767px) {
-                  margin-top: 10px;
-                }
-              `}
-              rel="noopener noreferrer"
-              href="https://yld.typeform.com/to/gfZ2jc"
-              target="_blank"
-            >
-              <span>Apply to speak</span>
-            </Button>
-          </InfoContainer>
-          <Illustration>
-            <AstronautStyled />
-            <BG
-              css={`
-                @media screen and (max-width: 1023px) {
-                  display: none;
-                }
-              `}
-            />
-
-            <MobileImage />
-          </Illustration>
-        </Main>
-      </Page>
-      <Divider />
+                <span>Become a speaker</span>
+              </Button>
+            </InfoContainer>
+          </Main>
+        </Page>
+      </div>
       <div id="about">
         <About
           headline={aboutHeadline.aboutHeadline}

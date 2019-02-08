@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const Title = styled.h1`
   font-size: 60px;
   margin-bottom: 10px;
+  color: white;
 
   @media screen and (max-width: 767px) {
     font-size: 30px;
@@ -17,7 +18,7 @@ export const Title = styled.h1`
 
 export const Tagline = styled.p`
   font-size: 24px;
-  max-width: 400px;
+  color: white;
   margin-bottom: 20px;
 
   @media screen and (max-width: 767px) {
@@ -31,6 +32,7 @@ export const Tagline = styled.p`
 
 export const Date = styled.span`
   font-size: 33px;
+  color: white;
   font-weight: 600;
 
   @media screen and (max-width: 767px) {

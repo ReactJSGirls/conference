@@ -3,18 +3,21 @@ import styled from 'styled-components'
 export default styled.a`
   text-decoration: none;
   background: transparent;
-  border: 3px solid #fb8e82;
+  border: 3px solid white;
   padding: 10px 15px;
   position: relative;
   transition: all 200ms ease;
+  color: #fff;
 
   span {
     position: relative;
     z-index: 1;
+    font-weight: bold;
   }
 
   &:hover {
-    color: #fff;
+    text-decoration: none;
+    color: #fb8e82;
 
     &:after,
     &:before {
@@ -31,7 +34,7 @@ export default styled.a`
     top: 0;
     height: 100%;
     width: 0;
-    background: #fb8e82;
+    background: white;
     z-index: 0;
   }
 
