@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export default styled.a`
   text-decoration: none;
@@ -9,6 +9,13 @@ export default styled.a`
   transition: all 200ms ease;
   color: #fff;
 
+  ${props =>
+    props.alternative &&
+    css`
+      border: 3px solid #fb8e82;
+      color: inherit;
+    `}
+
   span {
     position: relative;
     z-index: 1;
@@ -18,6 +25,12 @@ export default styled.a`
   &:hover {
     text-decoration: none;
     color: #fb8e82;
+
+    ${props =>
+      props.alternative &&
+      css`
+        color: white;
+      `}
 
     &:after,
     &:before {
@@ -36,6 +49,12 @@ export default styled.a`
     width: 0;
     background: white;
     z-index: 0;
+
+    ${props =>
+      props.alternative &&
+      css`
+        background: #fb8e82;
+      `}
   }
 
   &:before {

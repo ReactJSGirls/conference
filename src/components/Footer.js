@@ -37,7 +37,7 @@ const Links = styled.nav`
     margin-right: 20px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 500px) {
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -62,28 +62,6 @@ const Footer = () => (
         target="_blank"
       >
         Contact
-      </a>
-      Design by
-      <a
-        css={`
-          margin: 0 5px !important;
-        `}
-        href="https://twitter.com/miuki_miu"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        Elizabet Oliveira
-      </a>
-      &
-      <a
-        css={`
-          margin: 0 5px;
-        `}
-        href="https://dribbble.com/jameshevey"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        James Hevey
       </a>
     </Links>
   </FooterStyled>

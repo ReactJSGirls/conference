@@ -13,12 +13,6 @@ const Communities = styled.div`
   a:not(:last-child) {
     margin-right: 30px;
   }
-
-  @media screen and (max-width: 768px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-  }
 `
 const About = ({
   intro: { intro },
@@ -95,17 +89,20 @@ const About = ({
         />
       </a>
 
-      <p
+      <ReactMarkdown
         css={`
           margin: 40px 0;
         `}
-      >
-        <ReactMarkdown source={joinConversation} />
-      </p>
+        source={joinConversation}
+      />
       <Button
         rel="noopener noreferrer"
         href="https://yld.typeform.com/to/xz4xYb"
         target="_blank"
+        alternative
+        css={`
+          margin-top: 40px;
+        `}
       >
         <span>Sponsor the event</span>
       </Button>

@@ -42,7 +42,7 @@ a {
 
 .markdown img {
   width: 100px;
-  margin-right: 20px;
+  margin-right: 40px;
 }
 
 h1,
