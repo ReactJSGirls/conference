@@ -35,9 +35,9 @@ const ListItems = ({ closeMenu, darkMenu }) => (
     <Li onClick={closeMenu} dark={darkMenu}>
       <a href="#venue">Venue</a>
     </Li>
-    <Li onClick={closeMenu} dark={darkMenu}>
+    {/* <Li onClick={closeMenu} dark={darkMenu}>
       <a href="#tickets">Tickets</a>
-    </Li>
+    </Li> */}
     <Li onClick={closeMenu} dark={darkMenu}>
       <a href="#community">Community</a>
     </Li>
