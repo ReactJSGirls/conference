@@ -3,6 +3,8 @@ import Layout from '../layout/index'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import About from '../components/About'
+import Tickets from '../components/Tickets'
+import Speakers from '../components/Speakers'
 import Footer from '../components/Footer'
 import Page from '../components/Page'
 import Venue from '../components/Venue'
@@ -108,6 +110,20 @@ const IndexPage = ({
           history={history.history}
           text={aboutText.aboutText}
         />
+      </div>
+      <div id="speakers">
+        <div
+          css={`
+            padding-bottom: 100px;
+            background: #f3f4f9;
+            padding-top: 0;
+          `}
+        >
+          <Speakers {...contentfulVenue} />
+        </div>
+      </div>
+      <div id="tickets">
+        <Tickets />
       </div>
       <div id="venue">
         <div

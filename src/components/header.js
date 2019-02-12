@@ -33,11 +33,15 @@ const ListItems = ({ closeMenu, darkMenu }) => (
       <a href="#about">About</a>
     </Li>
     <Li onClick={closeMenu} dark={darkMenu}>
+      <a href="#speakers">Speakers</a>
+    </Li>
+    <Li onClick={closeMenu} dark={darkMenu}>
+      <a href="#tickets">Tickets</a>
+    </Li>
+    <Li onClick={closeMenu} dark={darkMenu}>
       <a href="#venue">Venue</a>
     </Li>
-    {/* <Li onClick={closeMenu} dark={darkMenu}>
-      <a href="#tickets">Tickets</a>
-    </Li> */}
+
     <Li onClick={closeMenu} dark={darkMenu}>
       <a href="#community">Community</a>
     </Li>

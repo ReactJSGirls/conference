@@ -16,6 +16,8 @@ const Head = ({ seoTitle, seoDescription }) => (
     <meta name="og:image" content="https://i.imgur.com/snwQ653.png" />
     <meta name="og:url" content="https://reactjsgirls.com" />
     <meta name="og:site_name" content={seoTitle} />
+    <script src="https://js.tito.io/v1" async />
+    <link rel="stylesheet" type="text/css" href="https://css.tito.io/v1.1" />
     <meta name="og:type" content="website" />
   </Helmet>
 )

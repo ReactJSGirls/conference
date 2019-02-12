@@ -66,24 +66,43 @@ h6 {
   display: none;
 }
 
+body {
+  .tito-wrapper  {
+    border: none;
+    background: inherit;
+    font-family: 'CircularStd','Roboto',sans-serif;
+    color: #41495D;
+  }
 
-.video-container {
-  position: relative;
-  padding-bottom: calc(50% - 30px);
-  padding-top: 30px;
-  height: 0;
-  overflow: hidden;
+  .tito-discount-code {
+    margin-left: 13px;
+  }
 
-  iframe,
-  object,
-  embed {
-    max-width: 854px;
-    max-height: 480px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  .tito-submit {
+    border: none !important;
+    background: #fb8e82 !important;
+    font-size: 16px !important;
+    height: auto !important;
+    font-weight: bold !important;
+            height: 44px !important;
+  }
+
+  .tito-submit:hover {
+    border-color: #c9645d !important;
+    background: #bd6a61 !important;
+}
+
+input.form-control.tito-discount-code-field.discount-code-field  {
+        height: 44px !important;
+    padding: 10px !important;
+    font-size: 16px !important;
+    border: 3px solid #fb8e82 !important;
+    color: #333 !important;
+    background: #fff !important;
+        box-shadow: none !important;
+    border-radius: 0 !important;
   }
 }
+
+
 `
