@@ -53,7 +53,8 @@ const IndexPage = ({
       dateAndLocation
     },
     contentfulVenue,
-    contentfulCommunity
+    contentfulCommunity,
+    allContentfulSpeaker
   }
 }) => {
   return (
@@ -119,7 +120,7 @@ const IndexPage = ({
             padding-top: 0;
           `}
         >
-          <Speakers {...contentfulVenue} />
+          <Speakers speakers={allContentfulSpeaker} />
         </div>
       </div>
       <div id="tickets">
@@ -146,6 +147,27 @@ const IndexPage = ({
 
 export const query = graphql`
   query {
+    allContentfulSpeaker {
+      edges {
+        node {
+          name
+          id
+          photo {
+            file {
+              url
+            }
+          }
+          github
+          twitter
+          website
+          job
+          talk {
+            title
+          }
+        }
+      }
+    }
+
     contentfulWebsiteData {
       conferenceName
       tagline
