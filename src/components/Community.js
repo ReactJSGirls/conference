@@ -181,7 +181,7 @@ const About = ({
       />
       <Communities>
         {partners
-          .filter(p => !p.sponsor)
+          .filter(s => !s.sponsorType)
           .map(partner => (
             <a
               key={partner.id}
