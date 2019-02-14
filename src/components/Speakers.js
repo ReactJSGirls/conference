@@ -93,33 +93,39 @@ const Venue = ({ speakers: { edges: speakers } }) => (
                 {speaker.talk.title}
               </span>
               <Social>
-                <li>
-                  <a
-                    href={speaker.twitter}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Twitter />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href={speaker.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Github />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href={speaker.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Website />
-                  </a>
-                </li>
+                {speaker.twitter ? (
+                  <li>
+                    <a
+                      href={speaker.twitter}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Twitter />
+                    </a>
+                  </li>
+                ) : null}
+                {speaker.github ? (
+                  <li>
+                    <a
+                      href={speaker.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Github />
+                    </a>
+                  </li>
+                ) : null}
+                {speaker.website ? (
+                  <li>
+                    <a
+                      href={speaker.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Website />
+                    </a>
+                  </li>
+                ) : null}
               </Social>
             </div>
           )
