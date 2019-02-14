@@ -52,10 +52,12 @@ const About = ({ headline, text, history }) => (
             <span
               {...props}
               css={`
-                display: block;
-                margin-bottom: 20px;
                 line-height: 36px;
                 font-size: 20px;
+
+                + em {
+                  margin-top: 20px;
+                }
               `}
             />
           )

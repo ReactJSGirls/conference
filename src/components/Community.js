@@ -46,7 +46,7 @@ const About = ({
           margin-top: 20px;
         `}
       >
-        Organizer
+        Organiser
       </h4>
       <a rel="noopener noreferrer" href="https://yld.io" target="_blank">
         {' '}
