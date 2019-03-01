@@ -94,23 +94,6 @@ const IndexPage = ({
                     display: block;
                     width: 200px;
                     margin-top: 50px;
-                    margin-right: 50px !important;
-
-                    @media screen and (max-width: 767px) {
-                      margin-top: 10px;
-                    }
-                  `}
-                  rel="noopener noreferrer"
-                  href="https://yld.typeform.com/to/gfZ2jc"
-                  target="_blank"
-                >
-                  <span>Become a speaker</span>
-                </Button>
-                <Button
-                  css={`
-                    display: block;
-                    width: 200px;
-                    margin-top: 50px;
 
                     @media screen and (max-width: 767px) {
                       margin-top: 10px;
