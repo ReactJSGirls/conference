@@ -1,25 +1,25 @@
 import React from 'react'
+import styled from 'styled-components'
 import PageTitle from './PageTitle'
 import Page from './Page'
 
-const About = ({ headline, text, history }) => (
-  <div
-    css={`
-      background: #f3f4f9;
-      padding: 50px 0;
-      padding-bottom: 100px;
-    `}
-  >
-    <Page
-      fancy
-      css={`
-        overflow: auto;
-      `}
-    >
+const Wrapper = styled.section`
+  background: #f3f4f9;
+  padding: 50px 0;
+  padding-bottom: 100px;
+`
+
+const TicketsPage = styled(Page)`
+  overflow: auto;
+`
+
+const Tickets = ({ headline, text, history }) => (
+  <Wrapper>
+    <TicketsPage fancy>
       <PageTitle>Tickets</PageTitle>
       <tito-widget event="reactjs-girls-conference/reactjs-girls-conference" />
-    </Page>
-  </div>
+    </TicketsPage>
+  </Wrapper>
 )
 
-export default About
+export default Tickets

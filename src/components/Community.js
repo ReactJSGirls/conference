@@ -14,6 +14,13 @@ const Communities = styled.div`
     margin-right: 30px;
   }
 `
+
+const Wrapper = styled.section`
+  background: #f3f4f9;
+  padding: 50px 0;
+  padding-bottom: 100px;
+  padding-top: 0;
+`
 const About = ({
   intro: { intro },
   partners,
@@ -21,14 +28,7 @@ const About = ({
   joinConversation: { joinConversation },
   sponsorsThankYou: { sponsorsThankYou }
 }) => (
-  <div
-    css={`
-      background: #f3f4f9;
-      padding: 50px 0;
-      padding-bottom: 100px;
-      padding-top: 0;
-    `}
-  >
+  <Wrapper>
     <Page fancy>
       <PageTitle>Sponsors & Community</PageTitle>
       <PageTitle
@@ -195,7 +195,7 @@ const About = ({
           ))}
       </Communities>
     </Page>
-  </div>
+  </Wrapper>
 )
 
 export default About

@@ -42,6 +42,36 @@ const InfoContainer = styled.main`
     text-align: center;
   }
 `
+
+const MainWrapper = styled.div`
+  background: #232c3d;
+  text-align: center;
+  padding: 60px 0;
+  min-height: 100vh;
+`
+
+const SpeakersWrapper = styled.div`
+  padding-bottom: 100px;
+  background: #f3f4f9;
+  padding-top: 0;
+`
+
+const Buy = styled(Button)`
+  display: block;
+  width: 200px;
+  margin-top: 50px;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 10px;
+  }
+`
+
+const VenueWrapper = styled.div`
+  padding-bottom: 100px;
+  background: #f3f4f9;
+  padding-top: 0;
+`
+
 const IndexPage = ({
   data: {
     contentfulWebsiteData: {
@@ -60,14 +90,7 @@ const IndexPage = ({
 }) => {
   return (
     <Layout>
-      <div
-        css={`
-          background: #232c3d;
-          text-align: center;
-          padding: 60px 0;
-          min-height: 100vh;
-        `}
-      >
+      <MainWrapper>
         <Page>
           <Main>
             <InfoContainer>
@@ -90,25 +113,14 @@ const IndexPage = ({
                   justify-content: center;
                 `}
               >
-                <Button
-                  css={`
-                    display: block;
-                    width: 200px;
-                    margin-top: 50px;
-
-                    @media screen and (max-width: 767px) {
-                      margin-top: 10px;
-                    }
-                  `}
-                  href="#tickets"
-                >
+                <Buy href="#tickets">
                   <span>Buy Tickets</span>
-                </Button>
+                </Buy>
               </div>
             </InfoContainer>
           </Main>
         </Page>
-      </div>
+      </MainWrapper>
       <div id="about">
         <About
           headline={aboutHeadline.aboutHeadline}
@@ -117,29 +129,17 @@ const IndexPage = ({
         />
       </div>
       <div id="speakers">
-        <div
-          css={`
-            padding-bottom: 100px;
-            background: #f3f4f9;
-            padding-top: 0;
-          `}
-        >
+        <SpeakersWrapper>
           <Speakers speakers={allContentfulSpeaker} mc={contentfulMc} />
-        </div>
+        </SpeakersWrapper>
       </div>
       <div id="tickets">
         <Tickets />
       </div>
       <div id="venue">
-        <div
-          css={`
-            padding-bottom: 100px;
-            background: #f3f4f9;
-            padding-top: 0;
-          `}
-        >
+        <VenueWrapper>
           <Venue {...contentfulVenue} />
-        </div>
+        </VenueWrapper>
       </div>
       <div id="community">
         <Community {...contentfulCommunity} />

@@ -1,16 +1,32 @@
 import React from 'react'
+import styled from 'styled-components'
 import PageTitle from './PageTitle'
 import Page from './Page'
 import ReactMarkdown from 'react-markdown'
 
+const Wrapper = styled.section`
+  background: #f3f4f9;
+  padding: 50px 0;
+  padding-bottom: 100px;
+`
+
+const Title = styled(PageTitle)`
+  font-size: 28px;
+  margin-top: 40px;
+  padding-bottom: 30px;
+`
+
+const List = styled.ul`
+  margin-top: 60px;
+  li {
+    margin-top: 20px;
+    line-height: 36px;
+    font-size: 20px;
+  }
+`
+
 const About = ({ headline, text, history }) => (
-  <div
-    css={`
-      background: #f3f4f9;
-      padding: 50px 0;
-      padding-bottom: 100px;
-    `}
-  >
+  <Wrapper>
     <Page
       fancy
       css={`
@@ -19,30 +35,12 @@ const About = ({ headline, text, history }) => (
     >
       <PageTitle>About</PageTitle>
       <h3>{headline}</h3>
-      <ul
-        css={`
-          margin-top: 60px;
-          li {
-            margin-top: 20px;
-            line-height: 36px;
-            font-size: 20px;
-          }
-        `}
-      >
+      <List>
         {text.split('\n').map((reason, i) => (
           <li key={i}>{reason}</li>
         ))}
-      </ul>
-      <PageTitle
-        css={`
-          font-size: 28px;
-          margin-top: 40px;
-          padding-bottom: 30px;
-        `}
-      >
-        History
-      </PageTitle>
-      {/* eslint-disable react/display-name */}
+      </List>
+      <Title>History</Title>
 
       <ReactMarkdown
         className="markdown"
@@ -63,9 +61,8 @@ const About = ({ headline, text, history }) => (
           )
         }}
       />
-      {/* eslint-enable react/display-name */}
     </Page>
-  </div>
+  </Wrapper>
 )
 
 export default About

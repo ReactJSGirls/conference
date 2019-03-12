@@ -28,9 +28,9 @@ export default ({ speakers: { edges: speakers }, mc }) => (
     <Page>
       <PageTitle>Speakers</PageTitle>
       <Speakers>
-        {speakers.map(({ node: speaker }) => {
-          return <Speaker key={speaker.id} speaker={speaker} />
-        })}
+        {speakers.map(({ node: speaker }) => (
+          <Speaker key={speaker.id} speaker={speaker} />
+        ))}
       </Speakers>
 
       <PageTitle
