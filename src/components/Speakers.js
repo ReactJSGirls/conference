@@ -33,7 +33,13 @@ export default ({ speakers: { edges: speakers }, mc }) => (
         })}
       </Speakers>
 
-      <PageTitle>MC</PageTitle>
+      <PageTitle
+        css={`
+          margin-top: 40px;
+        `}
+      >
+        MC
+      </PageTitle>
       <Speakers>
         <Speaker speaker={mc} />
       </Speakers>
