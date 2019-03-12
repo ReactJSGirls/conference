@@ -54,7 +54,8 @@ const IndexPage = ({
     },
     contentfulVenue,
     contentfulCommunity,
-    allContentfulSpeaker
+    allContentfulSpeaker,
+    contentfulMc
   }
 }) => {
   return (
@@ -123,7 +124,7 @@ const IndexPage = ({
             padding-top: 0;
           `}
         >
-          <Speakers speakers={allContentfulSpeaker} />
+          <Speakers speakers={allContentfulSpeaker} mc={contentfulMc} />
         </div>
       </div>
       <div id="tickets">
@@ -169,6 +170,19 @@ export const query = graphql`
           }
         }
       }
+    }
+
+    contentfulMc {
+      name
+      id
+      photo {
+        file {
+          url
+        }
+      }
+      github
+      twitter
+      job
     }
 
     contentfulWebsiteData {
