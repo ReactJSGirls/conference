@@ -42,7 +42,12 @@ const Workshops = ({ workshops: { edges } }) => (
     <WorkshopPage fancy>
       <PageTitle>Workshops</PageTitle>
       {edges.map(({ node: workshop }) => (
-        <div key={workshop.id}>
+        <div
+          key={workshop.id}
+          css={`
+            margin-bottom: 20px;
+          `}
+        >
           <Title>{workshop.title}</Title>
           <Instructor>By {workshop.instructor}</Instructor>
           <a
