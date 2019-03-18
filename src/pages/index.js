@@ -10,6 +10,7 @@ import Page from '../components/Page'
 import Venue from '../components/Venue'
 import Button from '../components/Button'
 import Community from '../components/Community'
+import Workshops from '../components/Workshops'
 import { Title, Tagline, Date } from '../components/Type'
 import Logo from '../assets/logo.svg'
 
@@ -85,7 +86,8 @@ const IndexPage = ({
     contentfulVenue,
     contentfulCommunity,
     allContentfulSpeaker,
-    contentfulMc
+    contentfulMc,
+    allContentfulWorkshop
   }
 }) => {
   return (
@@ -128,9 +130,14 @@ const IndexPage = ({
           text={aboutText.aboutText}
         />
       </div>
-      <div id="speakers">
+      <div id="workshops">
         <SpeakersWrapper>
           <Speakers speakers={allContentfulSpeaker} mc={contentfulMc} />
+        </SpeakersWrapper>
+      </div>
+      <div id="speakers">
+        <SpeakersWrapper>
+          <Workshops workshops={allContentfulWorkshop} />
         </SpeakersWrapper>
       </div>
       <div id="tickets">
@@ -220,6 +227,19 @@ export const query = graphql`
           title
           file {
             url
+          }
+        }
+      }
+    }
+    allContentfulWorkshop {
+      edges {
+        node {
+          title
+          id
+          instructor
+          location
+          description {
+            description
           }
         }
       }
