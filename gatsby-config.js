@@ -10,7 +10,8 @@ module.exports = {
   plugins: [
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sharp',
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-styled-components`,
     {
       resolve: 'gatsby-plugin-react-svg',

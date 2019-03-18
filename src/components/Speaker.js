@@ -1,4 +1,5 @@
 import React from 'react'
+import Img from 'gatsby-image'
 import Twitter from '../assets/twitter.svg'
 import Github from '../assets/github.svg'
 import Website from '../assets/website.svg'
@@ -25,7 +26,7 @@ const Talk = styled.span`
   color: #232c3d;
 `
 
-const Avatar = styled.figure`
+const Avatar = styled(Img)`
   width: 255px;
   height: 255px;
   background-image: url(${props => props.photo});
@@ -54,7 +55,7 @@ const Job = styled.span`
 
 export default ({ speaker }) => (
   <div>
-    <Avatar photo={speaker.photo.file.url} />
+    <Avatar fixed={speaker.photo.fixed} />
     <Name>{speaker.name}</Name>
     <Job>{speaker.job}</Job>
 

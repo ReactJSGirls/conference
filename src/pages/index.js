@@ -164,8 +164,8 @@ export const query = graphql`
           name
           id
           photo {
-            file {
-              url
+            fixed(width: 255, height: 255) {
+              ...GatsbyContentfulFixed
             }
           }
           github
@@ -183,8 +183,8 @@ export const query = graphql`
       name
       id
       photo {
-        file {
-          url
+        fixed(width: 255, height: 255) {
+          ...GatsbyContentfulFixed
         }
       }
       github
