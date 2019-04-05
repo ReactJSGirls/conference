@@ -130,12 +130,12 @@ const IndexPage = ({
           text={aboutText.aboutText}
         />
       </div>
-      <div id="workshops">
+      <div id="speakers">
         <SpeakersWrapper>
           <Speakers speakers={allContentfulSpeaker} mc={contentfulMc} />
         </SpeakersWrapper>
       </div>
-      <div id="speakers">
+      <div id="workshops">
         <SpeakersWrapper>
           <Workshops workshops={allContentfulWorkshop} />
         </SpeakersWrapper>
