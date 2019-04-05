@@ -56,33 +56,6 @@ const About = ({
         />
       </a>
 
-      {partners.filter(s => s.sponsorType === 'Partner').length ? (
-        <Fragment>
-          <h4
-            css={`
-              margin-top: 20px;
-            `}
-          >
-            Partners
-          </h4>
-
-          <Communities>
-            {partners
-              .filter(s => partners.sponsorType === 'Partner')
-              .map(partner => (
-                <a
-                  key={partner.id}
-                  rel="noopener noreferrer"
-                  href={partner.link}
-                  target="_blank"
-                >
-                  {' '}
-                  <img height="95" src={partner.logo.file.url} />
-                </a>
-              ))}
-          </Communities>
-        </Fragment>
-      ) : null}
       {partners.filter(s => s.sponsorType === 'Diversity').length ? (
         <Fragment>
           <h4
