@@ -44,10 +44,6 @@ const ListItems = ({ closeMenu, darkMenu }) => (
     <Li onClick={closeMenu} dark={darkMenu}>
       <a href="#venue">Venue</a>
     </Li>
-
-    <Li onClick={closeMenu} dark={darkMenu}>
-      <a href="#community">Community</a>
-    </Li>
   </Fragment>
 )
 
