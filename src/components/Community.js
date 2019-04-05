@@ -56,19 +56,19 @@ const About = ({
         />
       </a>
 
-      {partners.filter(s => partners.sponsorType === 'Sponsor').length ? (
+      {partners.filter(s => s.sponsorType === 'Sponsor').length ? (
         <Fragment>
           <h4
             css={`
               margin-top: 20px;
             `}
           >
-            Sponsors
+            Community Sponsors
           </h4>
 
           <Communities>
             {partners
-              .filter(s => partners.sponsorType === 'Sponsor')
+              .filter(s => s.sponsorType === 'Sponsor')
               .map(partner => (
                 <a
                   key={partner.id}
