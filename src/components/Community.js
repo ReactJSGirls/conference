@@ -121,7 +121,7 @@ const About = ({
             Community Sponsors
           </h4>
 
-          <Communities>
+          <Communities styles={{ width: '50px'}}>
             {partners
               .filter(s => s.sponsorType === 'Sponsor')
               .map(partner => (
@@ -132,7 +132,7 @@ const About = ({
                   target="_blank"
                 >
                   {' '}
-                  <img height="95" src={partner.logo.file.url} />
+                  <img width="200" src={partner.logo.file.url}/>
                 </a>
               ))}
           </Communities>
