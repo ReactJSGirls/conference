@@ -56,34 +56,6 @@ const About = ({
         />
       </a>
 
-      {partners.filter(s => s.sponsorType === 'Sponsor').length ? (
-        <Fragment>
-          <h4
-            css={`
-              margin-top: 20px;
-            `}
-          >
-            Community Sponsors
-          </h4>
-
-          <Communities>
-            {partners
-              .filter(s => s.sponsorType === 'Sponsor')
-              .map(partner => (
-                <a
-                  key={partner.id}
-                  rel="noopener noreferrer"
-                  href={partner.link}
-                  target="_blank"
-                >
-                  {' '}
-                  <img height="95" src={partner.logo.file.url} />
-                </a>
-              ))}
-          </Communities>
-        </Fragment>
-      ) : null}
-
       {partners.filter(s => s.sponsorType === 'Partner').length ? (
         <Fragment>
           <h4
@@ -124,6 +96,34 @@ const About = ({
           <Communities>
             {partners
               .filter(s => s.sponsorType === 'Diversity')
+              .map(partner => (
+                <a
+                  key={partner.id}
+                  rel="noopener noreferrer"
+                  href={partner.link}
+                  target="_blank"
+                >
+                  {' '}
+                  <img height="95" src={partner.logo.file.url} />
+                </a>
+              ))}
+          </Communities>
+        </Fragment>
+      ) : null}
+
+      {partners.filter(s => s.sponsorType === 'Sponsor').length ? (
+        <Fragment>
+          <h4
+            css={`
+              margin-top: 20px;
+            `}
+          >
+            Community Sponsors
+          </h4>
+
+          <Communities>
+            {partners
+              .filter(s => s.sponsorType === 'Sponsor')
               .map(partner => (
                 <a
                   key={partner.id}
