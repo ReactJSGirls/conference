@@ -32,50 +32,53 @@ const About = ({
   diversityText: { diversityText },
   joinConversation: { joinConversation },
   sponsorsThankYou: { sponsorsThankYou }
-}) => (
-  <Wrapper>
-    <Page fancy>
-      <PageTitle>Sponsors & Community</PageTitle>
+}) => {
+  const partnerSponsors = partners.filter(s => s.sponsorType === 'Partner')
+  const diversitySponsors = partners.filter(s => s.sponsorType === 'Diversity')
+  const communitySponsors = partners.filter(s => !s.sponsorType)
 
-      <SubSection>
-        <PageTitle
-          css={`
-            font-size: 28px;
-            padding-bottom: 30px;
-          `}
-        >
-          Sponsors
-        </PageTitle>
-        <ReactMarkdown source={sponsorsThankYou} />
-        <h4
-          css={`
-            margin-top: 40px;
-          `}
-        >
-          Organiser
-        </h4>
-        <a rel="noopener noreferrer" href="https://yld.io" target="_blank">
-          {' '}
-          <img
-            width="130"
-            src="https://uploads-ssl.webflow.com/5b3dfe51f5523c976ad4b12b/5b436659d4f8bb51f436538a_*YLD%20logo%20-%20main-p-500.jpeg"
-          />
-        </a>
+  return (
+    <Wrapper>
+      <Page fancy>
+        <PageTitle>Sponsors & Community</PageTitle>
 
-        {partners.filter(s => s.sponsorType === 'Partner').length ? (
-          <Fragment>
-            <h4
-              css={`
-                margin-top: 40px;
-              `}
-            >
-              Partner Sponsors
-            </h4>
+        <SubSection>
+          <PageTitle
+            css={`
+              font-size: 28px;
+              padding-bottom: 30px;
+            `}
+          >
+            Sponsors
+          </PageTitle>
+          <ReactMarkdown source={sponsorsThankYou} />
+          <h4
+            css={`
+              margin-top: 40px;
+            `}
+          >
+            Organiser
+          </h4>
+          <a rel="noopener noreferrer" href="https://yld.io" target="_blank">
+            {' '}
+            <img
+              width="130"
+              src="https://uploads-ssl.webflow.com/5b3dfe51f5523c976ad4b12b/5b436659d4f8bb51f436538a_*YLD%20logo%20-%20main-p-500.jpeg"
+            />
+          </a>
 
-            <Communities styles={{ width: '50px'}}>
-              {partners
-                .filter(s => s.sponsorType === 'Partner')
-                .map(partner => (
+          {partnerSponsors.length ? (
+            <Fragment>
+              <h4
+                css={`
+                  margin-top: 40px;
+                `}
+              >
+                {partnerSponsors.length === 1 ? 'Partner Sponsor' : 'Partner Sponsor'}
+              </h4>
+
+              <Communities styles={{ width: '50px'}}>
+                {partnerSponsors.map(partner => (
                   <a
                     key={partner.id}
                     rel="noopener noreferrer"
@@ -86,24 +89,22 @@ const About = ({
                     <img width="200" src={partner.logo.file.url}/>
                   </a>
                 ))}
-            </Communities>
-          </Fragment>
-        ) : null}
+              </Communities>
+            </Fragment>
+          ) : null}
 
-        {partners.filter(s => s.sponsorType === 'Diversity').length ? (
-          <Fragment>
-            <h4
-              css={`
-                margin-top: 40px;
-              `}
-            >
-              Diversity Sponsors
-            </h4>
+          {diversitySponsors.length ? (
+            <Fragment>
+              <h4
+                css={`
+                  margin-top: 40px;
+                `}
+              >
+                Diversity Sponsors
+              </h4>
 
-            <Communities>
-              {partners
-                .filter(s => s.sponsorType === 'Diversity')
-                .map(partner => (
+              <Communities>
+                {diversitySponsors.map(partner => (
                   <a
                     key={partner.id}
                     rel="noopener noreferrer"
@@ -114,57 +115,55 @@ const About = ({
                     <img height="95" src={partner.logo.file.url} />
                   </a>
                 ))}
-            </Communities>
-          </Fragment>
-        ) : null}
+              </Communities>
+            </Fragment>
+          ) : null}
 
-        <ReactMarkdown
-          css={`
-            margin: 40px 0;
-          `}
-          source={joinConversation}
-        />
-        <Button
-          rel="noopener noreferrer"
-          href="https://yld.typeform.com/to/xz4xYb"
-          target="_blank"
-          alternative
-          css={`
-            margin-top: 40px;
-          `}
-        >
-          <span>Sponsor the event</span>
-        </Button>
+          <ReactMarkdown
+            css={`
+              margin: 40px 0;
+            `}
+            source={joinConversation}
+          />
+          <Button
+            rel="noopener noreferrer"
+            href="https://yld.typeform.com/to/xz4xYb"
+            target="_blank"
+            alternative
+            css={`
+              margin-top: 40px;
+            `}
+          >
+            <span>Sponsor the event</span>
+          </Button>
 
-        <p
-          css={`
-            margin-top: 40px;
-          `}
-        >
-          <ReactMarkdown source={diversityText} />
-        </p>
-      </SubSection>
+          <p
+            css={`
+              margin-top: 40px;
+            `}
+          >
+            <ReactMarkdown source={diversityText} />
+          </p>
+        </SubSection>
 
-      <SubSection>
-        <PageTitle
-          css={`
-            font-size: 28px;
-            margin-top: 40px;
-            padding-bottom: 30px;
-          `}
-        >
-          Community
-        </PageTitle>
-        <ReactMarkdown
-          css={`
-            margin-bottom: 40px;
-          `}
-          source={intro}
-        />
-        <Communities>
-          {partners
-            .filter(s => !s.sponsorType)
-            .map(partner => (
+        <SubSection>
+          <PageTitle
+            css={`
+              font-size: 28px;
+              margin-top: 40px;
+              padding-bottom: 30px;
+            `}
+          >
+            Community
+          </PageTitle>
+          <ReactMarkdown
+            css={`
+              margin-bottom: 40px;
+            `}
+            source={intro}
+          />
+          <Communities>
+            {communitySponsors.map(partner => (
               <a
                 key={partner.id}
                 rel="noopener noreferrer"
@@ -175,10 +174,11 @@ const About = ({
                 <img height="95" src={partner.logo.file.url} />
               </a>
             ))}
-        </Communities>
-      </SubSection>
-    </Page>
-  </Wrapper>
-)
+          </Communities>
+        </SubSection>
+      </Page>
+    </Wrapper>
+  )
+}
 
 export default About
