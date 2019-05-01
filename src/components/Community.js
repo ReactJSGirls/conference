@@ -62,6 +62,34 @@ const About = ({
           />
         </a>
 
+        {partners.filter(s => s.sponsorType === 'Partner').length ? (
+          <Fragment>
+            <h4
+              css={`
+                margin-top: 40px;
+              `}
+            >
+              Partner Sponsors
+            </h4>
+
+            <Communities styles={{ width: '50px'}}>
+              {partners
+                .filter(s => s.sponsorType === 'Partner')
+                .map(partner => (
+                  <a
+                    key={partner.id}
+                    rel="noopener noreferrer"
+                    href={partner.link}
+                    target="_blank"
+                  >
+                    {' '}
+                    <img width="200" src={partner.logo.file.url}/>
+                  </a>
+                ))}
+            </Communities>
+          </Fragment>
+        ) : null}
+
         {partners.filter(s => s.sponsorType === 'Diversity').length ? (
           <Fragment>
             <h4
@@ -84,34 +112,6 @@ const About = ({
                   >
                     {' '}
                     <img height="95" src={partner.logo.file.url} />
-                  </a>
-                ))}
-            </Communities>
-          </Fragment>
-        ) : null}
-
-        {partners.filter(s => s.sponsorType === 'Sponsor').length ? (
-          <Fragment>
-            <h4
-              css={`
-                margin-top: 40px;
-              `}
-            >
-              Community Sponsors
-            </h4>
-
-            <Communities styles={{ width: '50px'}}>
-              {partners
-                .filter(s => s.sponsorType === 'Sponsor')
-                .map(partner => (
-                  <a
-                    key={partner.id}
-                    rel="noopener noreferrer"
-                    href={partner.link}
-                    target="_blank"
-                  >
-                    {' '}
-                    <img width="200" src={partner.logo.file.url}/>
                   </a>
                 ))}
             </Communities>
