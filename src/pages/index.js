@@ -57,6 +57,7 @@ const SpeakersWrapper = styled.div`
   padding-top: 0;
 `
 
+
 const Buy = styled(Button)`
   display: block;
   width: 200px;
@@ -66,6 +67,8 @@ const Buy = styled(Button)`
     margin-top: 10px;
   }
 `
+
+const Watch = Buy;
 
 const VenueWrapper = styled.div`
   padding-bottom: 100px;
@@ -115,9 +118,9 @@ const IndexPage = ({
                   justify-content: center;
                 `}
               >
-                <Buy href="#tickets">
-                  <span>Buy Tickets</span>
-                </Buy>
+                <Watch href="https://www.youtube.com/playlist?list=PLfrHCOIcmSupF372EGlyi3l4y2R7F8A3q">
+                  <span>Watch the talks</span>
+                </Watch>
               </div>
             </InfoContainer>
           </Main>
