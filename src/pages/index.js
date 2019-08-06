@@ -58,7 +58,7 @@ const SpeakersWrapper = styled.div`
 `
 
 
-const Buy = styled(Button)`
+const Watch = styled(Button)`
   display: block;
   width: 200px;
   margin-top: 50px;
@@ -67,9 +67,6 @@ const Buy = styled(Button)`
     margin-top: 10px;
   }
 `
-
-const Watch = Buy;
-
 const VenueWrapper = styled.div`
   padding-bottom: 100px;
   background: #f3f4f9;
@@ -142,9 +139,6 @@ const IndexPage = ({
         <SpeakersWrapper>
           <Workshops workshops={allContentfulWorkshop} />
         </SpeakersWrapper>
-      </div>
-      <div id="tickets">
-        <Tickets />
       </div>
       <div id="venue">
         <VenueWrapper>
