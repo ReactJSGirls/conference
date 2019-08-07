@@ -3,7 +3,6 @@ import Layout from '../layout/index'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import About from '../components/About'
-import Tickets from '../components/Tickets'
 import Speakers from '../components/Speakers'
 import Footer from '../components/Footer'
 import Page from '../components/Page'
@@ -57,7 +56,8 @@ const SpeakersWrapper = styled.div`
   padding-top: 0;
 `
 
-const Buy = styled(Button)`
+
+const Watch = styled(Button)`
   display: block;
   width: 200px;
   margin-top: 50px;
@@ -66,7 +66,6 @@ const Buy = styled(Button)`
     margin-top: 10px;
   }
 `
-
 const VenueWrapper = styled.div`
   padding-bottom: 100px;
   background: #f3f4f9;
@@ -115,9 +114,9 @@ const IndexPage = ({
                   justify-content: center;
                 `}
               >
-                <Buy href="#tickets">
-                  <span>Buy Tickets</span>
-                </Buy>
+                <Watch target="_blank" href="https://www.youtube.com/playlist?list=PLfrHCOIcmSupF372EGlyi3l4y2R7F8A3q">
+                  <span>Watch the talks</span>
+                </Watch>
               </div>
             </InfoContainer>
           </Main>
@@ -139,9 +138,6 @@ const IndexPage = ({
         <SpeakersWrapper>
           <Workshops workshops={allContentfulWorkshop} />
         </SpeakersWrapper>
-      </div>
-      <div id="tickets">
-        <Tickets />
       </div>
       <div id="venue">
         <VenueWrapper>
