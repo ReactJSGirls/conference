@@ -3,7 +3,6 @@ import Layout from '../layout/index'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import About from '../components/About'
-import Tickets from '../components/Tickets'
 import Speakers from '../components/Speakers'
 import Footer from '../components/Footer'
 import Page from '../components/Page'
@@ -115,7 +114,7 @@ const IndexPage = ({
                   justify-content: center;
                 `}
               >
-                <Watch href="https://www.youtube.com/playlist?list=PLfrHCOIcmSupF372EGlyi3l4y2R7F8A3q">
+                <Watch target="_blank" href="https://www.youtube.com/playlist?list=PLfrHCOIcmSupF372EGlyi3l4y2R7F8A3q">
                   <span>Watch the talks</span>
                 </Watch>
               </div>
